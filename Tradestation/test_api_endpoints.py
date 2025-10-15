@@ -54,8 +54,36 @@ def test_refresh_token():
         'refresh_token': refresh_token
     }
     
-    print(f"\nRefresh token request data (POST body):")
+    print(f"\nRefresh token request data (POST body - form encoded):")
+    print("grant_type=refresh_token&client_id=...&client_secret=...&refresh_token=...")
+    print(f"\nActual data being sent:")
     print(json.dumps(token_data, indent=2))
+    
+    # Actually make the request to get access token
+    print(f"\nMaking actual request to get access token...")
+    try:
+        import requests
+        
+        response = requests.post(
+            "https://signin.tradestation.com/oauth/token",
+            data=token_data,
+            headers={'Content-Type': 'application/x-www-form-urlencoded'}
+        )
+        
+        print(f"Response Status: {response.status_code}")
+        
+        if response.status_code == 200:
+            access_token_data = response.json()
+            access_token = access_token_data.get('access_token')
+            print(f"SUCCESS! Got access token: {access_token[:20]}...")
+            return access_token
+        else:
+            print(f"ERROR: {response.text}")
+            return None
+            
+    except Exception as e:
+        print(f"Request failed: {e}")
+        return None
     
     return True
 
@@ -93,22 +121,33 @@ def test_barcharts_endpoint(access_token=None):
             'Content-Type': 'application/json'
         }
         
+        print(f"Making GET request to: {full_url}")
+        print(f"Headers: Authorization: Bearer {access_token[:20]}...")
+        
         try:
             response = requests.get(full_url, headers=headers)
             print(f"\nResponse Status: {response.status_code}")
             
             if response.status_code == 200:
                 data = response.json()
-                print("Success! Response data:")
-                print(json.dumps(data, indent=2)[:500] + "..." if len(json.dumps(data, indent=2)) > 500 else json.dumps(data, indent=2))
+                print("SUCCESS! Historical data retrieved:")
+                if 'Bars' in data:
+                    bars = data['Bars']
+                    print(f"Number of bars: {len(bars)}")
+                    if bars:
+                        print(f"Date range: {bars[0].get('DateTime', 'N/A')} to {bars[-1].get('DateTime', 'N/A')}")
+                        print(f"Latest price: ${bars[-1].get('Close', 'N/A')}")
+                else:
+                    print("Response structure:")
+                    print(json.dumps(data, indent=2)[:500] + "..." if len(json.dumps(data, indent=2)) > 500 else json.dumps(data, indent=2))
             else:
-                print(f"Error: {response.text}")
+                print(f"ERROR: {response.text}")
                 
         except Exception as e:
             print(f"Request failed: {e}")
     else:
-        print("\nNo access token provided - showing request structure only")
-        print("To test with real data, provide a valid access token")
+        print("\nNo access token available - cannot test barcharts endpoint")
+        print("Make sure refresh token is working first")
 
 def test_with_our_client():
     """Test using our TradeStation client."""
@@ -145,11 +184,11 @@ def main():
     print("1. POST https://signin.tradestation.com/oauth/token (get access token from refresh token)")
     print("2. GET https://api.tradestation.com/v3/marketdata/barcharts/AAPL (use access token)")
     
-    # Test refresh token
-    refresh_result = test_refresh_token()
+    # Test refresh token and get access token
+    access_token = test_refresh_token()
     
-    # Test barcharts endpoint structure
-    test_barcharts_endpoint()
+    # Test barcharts endpoint with the access token
+    test_barcharts_endpoint(access_token)
     
     # Test with our client
     client = test_with_our_client()
