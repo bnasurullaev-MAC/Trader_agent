@@ -1,0 +1,1085 @@
+Welcome back to the computer screen. What we're going to do now is we're going to continue building our knowledge and understanding, continue building our education in the bond market. Now, obviously in the previous video, we looked at real interest rates and the yield
+
+curve as leading indicators to the economy and the stock market. What we're going to look at now is
+
+another leading indicator. So welcome to video number five, leading indicators to corporate bonds
+
+and credit spreads. That's what we're going to
+
+focus on here. We're going to look at the bond market in the corporate world and look at credit
+
+spreads of the corporate bond market over the benchmark. Now, there is a download that accompanies
+
+video number five. So if you go to the downloads area under video number five, you will see the following spreadsheet
+
+file.
+
+So, go to the downloads area under this video and download Corporate Bond Indices, the Excel
+
+file Corporate Bond Indices. And that gives you all of the supporting resources and data that you need for this video.
+
+So what exactly is a corporate bond?
+
+Well, let's start building up our knowledge here.
+
+In the previous video, we learned about government or sovereign bonds.
+
+So when a government borrows money from the private
+
+sector. Here, what we're going to look at are corporate bonds. So that's when companies borrow
+
+money from the private sector. And we're going to look at how we can use corporate bonds,
+
+look at how we can use corporate bonds, how we can use them as a tool in aggregate as leading indicators to predict the economy and therefore equities. So the S&P 500 predicting returns in
+
+the stock market as a whole. Now, a corporate bond is just simply debt issued by a company in order to raise capital for their business operations and to grow the business.
+
+Corporate debt has yields, like all debt.
+
+Yields on corporate debt typically trade at a premium to government debt and benchmarks because of higher company risk of default.
+
+They work in exactly the same way as government bonds, except in this case,
+
+the issuer is a corporation or company itself. Okay. Investors
+
+Investors in the private market lend money to the company, and that is known as the principal.
+
+And the company provides a series of coupons, so interest payments, over a specified maturity of the bond.
+
+At maturity of the bond, the principal is paid back to investors.
+
+So it's all pretty straightforward stuff to understand the basics of what a corporate bond
+
+actually is.
+
+Where we are going to focus our attention, yes, no surprise, we will be focusing our attention
+
+on the United States.
+
+The corporate bond market in the US is the largest in the world. And it's a major source of financing for US corporations and
+
+businesses that have operations inside the United States and outside the US worldwide,
+
+and for international corporations with operations inside the US and overseas. It is by far the most important corporate debt market in the world.
+
+And it has a massive impact on both US and global liquidity and obviously gross domestic product.
+
+For corporates, debt financing rather than equity financing is often preferred because it's a much cheaper way of raising capital. It doesn't require selling
+
+an equity stake in the company or diluting current shareholders. And prior to issuance of any debt,
+
+a corporate bond is basically reviewed for its credit worthiness by what we call ratings agencies.
+
+Credit worthiness is actually categorized.
+
+So the categorization of credit worthiness
+
+will pretty much determine the price or level of interest
+
+that a corporate bond is issued at relative
+
+to the risk-free rate,
+
+which we are using as the 10-year treasury rate. We are using this as our risk-free rate, which we are using as the 10-year treasury rate.
+
+We are using this as our risk-free rate as our benchmark.
+
+Now, continuing our understanding of corporate bonds and the corporate bond market,
+
+we need to understand what a credit spread is.
+
+So, the corporate bond market works in a particular way. We have a primary market and a secondary
+
+market. So once a corporate bond is issued in the primary market and the company has raised
+
+the money on the issuance of that debt, so investors cover the principle. It then trades in an open secondary
+
+market and the price, so the yield, is determined by the private sector, by the free market.
+
+Now, there's obviously going to be many factors that are going to affect the yield or the premium at which a particular corporate bond yield trades versus the benchmark 10-year treasury rate.
+
+So there's going to be general macroeconomic conditions, which is looking at it from a top-down perspective.
+
+There's going to obviously be business performance affecting the yield,
+
+the price on the bond, on the corporate bond.
+
+So that's basically the business performance of the company itself.
+
+So that's coming at it from a bottom-up perspective.
+
+there's going to be sector situations affecting the price of that bond as well. So sector performance, if a particular sector is under stress, for example, or a particular sector is performing well,
+
+that's going to affect individual companies and the price of their debt in the secondary market across the entire sector.
+
+And also, benchmark rates themselves and liquidity all play a part in this.
+
+So there's many factors to consider.
+
+Now, similar to government bonds and the yield curve that we looked at in the previous video, corporate bonds have a spread.
+
+So the spread is the premium that the corporate bond trades at versus the benchmark.
+
+And it's important as an indicator for determining risk sentiment or future expectations in the
+
+market.
+
+So it can be used as a leading indicator by traders and portfolio managers to GDP growth,
+
+corporate earnings and risk assets like the S&P 500. Now, we mentioned previously that before companies issue debt to the private market, there are agencies, ratings agencies, that assess the fundamentals of a company, of a business.
+
+And they basically give the debt that they're issuing, the debt that the company is issuing, they give it a credit rating.
+
+And there's various credit agencies globally that we need to pay attention to.
+
+If you look on the left hand side, you'll see a list of all the main agencies, but the most important
+
+in the world are Moody's, Standard & Poor's, S&P and Fitch. So these are the main ones that we need to pay attention to in the corporate credit, corporate bond market.
+
+Now the range of ratings ranges from AAA to CCC.
+
+Okay.
+
+And there's two types of grade in these ratings.
+
+There's investment grade and non-investment grade.
+
+So investment grade is what you're looking at right now on the screen.
+
+The highest credit worthiness and the debt in the corporate bond market that has the tightest
+
+spreads over the benchmark is triple A rated.
+
+These are top level considered and rated companies.
+
+So the fundamentals are solid. The debt is given a triple A rating and stamped as the highest rated corporate debt in the world.
+
+Triple A is part of investment grade.
+
+Now, triple B, everything from triple A down to triple B is still investment grade.
+
+Triple B in itself is still investment grade,
+
+but it has higher spreads over the benchmark
+
+with yields at a premium to AAA.
+
+Now you can see on the screen,
+
+when we look at the various credit ratings agencies,
+
+they use different terminology
+
+across the credit worthiness spectrum.
+
+So if you look, for example, at Moody's Investor Service, Moody's, and you look in the second column where we have the lettering code, AA1 is the same or considered the same by the market as when we look at Standard & Poor's
+
+AA+ and Fitch AA+.
+
+If we look across the spectrum out to BBB, for example, you can see that Moody's assign a BAA3 to their lowest level of investment grade, but Standard & Poor's and Fitch assign a BBB minus.
+
+So you see these pluses and minuses across the spectrum.
+
+You'll see sometimes different codes denoting different levels of credit worthiness. This table should help you out in identifying the level of credit worthiness
+
+for a particular corporate bond and ratings agency going forward.
+
+But what we're looking at here is the table for investment grade.
+
+So going forward, anything that you see that's considered investment
+
+grade is very high credit worthiness. We're talking top companies in the world that have
+
+high credit worthiness and good fundamentals according to the
+
+credit ratings agencies. Now, outside of that, we have non-investment grade. So what we term in the
+
+market as junk bonds. So anything that's non-investment grade is considered to be open quotes,
+
+junk, close quotes, or a junk bond. Now, you often hear this phrase in the market, we hear in the
+
+corporate bond market the phrase of high yield debt, okay? The high yield market. Well, the high yield
+
+market is pretty much what you're looking at on the screen here, it starts at the BB+ level.
+
+And if we look from the left to the right,
+
+you'll see that outside investment grade,
+
+so non-investment grade, junk bond, high yields,
+
+this is where the high yield corporate bond ratings begin.
+
+Now, we have our ranges pretty much from AAA to CCC, but CCC is basically considered to be
+
+the junkiest of the junk. So CCC and lower. So looking at C C on the screen, I'm looking to the right hand side,
+
+triple C or lower is considered to be the junkiest of the junk with the highest risk of debt default.
+
+So what are these companies? These are companies that have, according to the ratings agencies,
+
+terrible fundamentals. So again, this is all pretty straightforward stuff
+
+to understand to this stage. But how do we actually use corporate bonds as a tool, as a leading
+
+indicator for monitoring and forecasting our expectations or the market's expectations as well, for future
+
+GDP growth and direction of the stock market. Well, we look at aggregate corporate bond indices.
+
+Now, in the same way that the S&P 500 is calculated by aggregating prices of US equities, so the top 500 stocks,
+
+credit indices aggregate the yields on the most widely traded credits.
+
+These indices can be split by operational sector, so the sectors that the companies are operating in,
+
+so for example, like financials or industrials,
+
+but more commonly, they are split up
+
+by their credit worthiness or the credit quality,
+
+which are one and the same thing
+
+Actually, credit worthiness is basically credit quality.
+
+So we've looked at credit worthiness tables and we know that there's investment grade,
+
+there's high yield or junk as well, so non-investment grade.
+
+But we also have aggregate corporate bond indices that fall in between.
+
+bond indices that fall in between. So they are termed as crossover credits or crossover aggregate corporate bond indices. Now these aggregate corporate
+
+bond indices often, but not all the time, act as leading indicators to risk assets like equities.
+
+Why?
+
+Because the market is pricing the risk.
+
+The private market is pricing the premium
+
+at which these bonds that make up
+
+the aggregate corporate bond indices,
+
+so the holdings of these indices,
+
+the market is pricing that risk.
+
+So we can use these as leading indicators to the stock market and to GDP.
+
+So let's start having a look at some of these aggregate corporate bond indices.
+
+Let's see what they look like.
+
+Let's get a better understanding of what we can use in terms of leading indicators in the corporate bond market.
+
+Well, what we're looking at here is the CSIA index, which is basically AA, US corporate bonds aggregated into an index.
+
+And this is the spread of those bonds over the 10-year treasury.
+
+So we're looking at the spread over the 10-year treasury.
+
+Now, if we look at the chart of this bond index, what do we notice here?
+
+Well, first of all, just a few things to take notice of.
+
+We can see where it's trading at the time of filming this video.
+
+You can see on the bottom right hand corner of the screen, we've got 0.71%, so 71 basis points. That means that this aggregate corporate bond index,
+
+the AA corporate bond index, is trading at 71 basis points over the 10-year treasury rate.
+
+What else do we notice here? Well, we see that when there's big moves up in this spread,
+
+we can denote that it's basically around times of economic stress. So if we look all the way back, for example, to 2007,
+
+when this spread blew out and went aggressively up.
+
+That was associated with the global financial crisis
+
+before the financial crisis actually happened.
+
+So we can see that it led the financial crisis in 2008.
+
+We can also see, for example, in 2011,
+
+when the spread blew out,
+
+but then the spread came back down. There was obviously a lot of
+
+intervention in the market, not this particular market, but in the treasury market from the
+
+Federal Reserve. And that arguably averted a liquidity crisis. And then we can see here as well, if we look at more
+
+recent times in 2020, we can see the AA corporate bond index spread over the 10
+
+year rallying hard very, very quickly and then coming back down, back under
+
+control because of massive intervention from the Fed. So what we're looking at here, when we look at AA,
+
+is obviously the investment grade spread
+
+over 10-year treasuries.
+
+So if you look back at your tables for credit worthiness,
+
+you'll note that AA is very high up
+
+in the credit worthiness tables,
+
+pretty much gold-plated, just one down from triple A in the ratings. And we can actually look at even more aggregate corporate bond indices in
+
+investment grade. We can look at the CSI triple B index. So this again is investment grade, but it's at the lower end of investment grade.
+
+And what we're looking at here is a mix of BBB or BAA rated bonds. And we're looking at the spread
+
+of those bonds when they're aggregated into an index over the 10-year Treasury, the risk-free rate.
+
+And we can even have a look at a chart of the BBB Corporate Bond Index over the 10-year Treasury.
+
+So we can have a look at that spread, like we looked at the AA, and we can see that it's a very, very similar shape. We can see that it can predict potential times of economic stress
+
+and potential times when liquidity is drying up in the market.
+
+But we can also notice something as well, that it trades at a slight premium.
+
+So a slight premium to double A.
+
+So as mentioned, this is at the lower end of investment grade.
+
+And you can see the latest price in the bottom right-hand corner
+
+of the screen is 108 basis points.
+
+which, if you remember, the AA was trading at 71 basis points.
+
+So it's trading at a 37 basis point premium.
+
+And you would expect it to trade at a premium.
+
+But we can keep an eye on these things.
+
+And not only look at the spreads over 10-year treasuries of various investment grades in the corporate bond market,
+
+various investment grades in the corporate bond market, but we can compare the different investment grades
+
+to each other, and we can check and keep an eye
+
+on the premiums of, for example, triple B
+
+over high investment grade like double A,
+
+and we can also look at high yield and junk debt
+
+over investment grade.
+
+also look at high yield and junk debt over investment grade. Now there are various aggregate corporate bond indices for both investment grade and for junk and high yield. This is one of the
+
+aggregate corporate bond indices for junk essentially. The triple C investment grade rating.
+
+This is the Barclays Capital Bloomberg Triple C Corporate Bond Index.
+
+This spread over the 10-year treasury.
+
+So there's various products.
+
+There's in fact multiple, and you shouldn't worry that we're using Bloomberg indices here, because I'm going to give you some publicly well-known indices that you can have a look at, and you can actually go and get the data on. So if we look at the chart of the triple C, we again notice that it does,
+
+to a large extent, move when there's a liquidity crisis or a big slowdown in economic growth.
+
+This data only goes back to 2013, but you can see here that triple C junk debt,
+
+the junkiest of the junk, was having a difficult time of it back in 2015,
+
+whether it was for a small period of time, a blowout of junk debt versus other investment grade and against the 10-year Treasury rate.
+
+We also obviously had a major move during the COVID crisis and the economic lockdown of 2020.
+
+Also note the price, so the latest price bottom righthand corner of the screen, 294 basis points.
+
+So if we compare that to BBB and AA,
+
+we're basically looking at around approximately, at the time,
+
+a 200 basis point premium. Now, something else that you may notice or should have picked up on
+
+is the magnitude of these moves. So if you look at the move back in 2014 to 2015,
+
+of the low to the high of the spread, you can see that the triple C over 10-year Treasury spread, when it moves, it moves a lot.
+
+It moved from around 300 basis points up to seven.
+
+So a full 400 basis points there.
+
+And then, obviously, the reverse happens
+
+when liquidity comes back into the market.
+
+And it took a while to come back down,
+
+for the spread to come back down,
+
+for the spread to come back down,
+
+but it did eventually in 2017 get back
+
+to around 300 basis points.
+
+And you can see, for example, in 2020,
+
+the move from 300 basis points,
+
+almost to 1000 basis points, almost to 10%.
+
+So the moves in the triple C spread can be really big.
+
+And there's reason for that.
+
+If we think about these companies, their fundamentals are rated the lowest.
+
+They are the junkiest of the junk.
+
+So they are the most affected and the most immediately affected as companies.
+
+Their fundamentals are immediately affected when compared to investment grade fundamentals.
+
+And they're essentially the most sensitive. So the triple C corporate bond indices,
+
+the spreads over the 10-year are very, very
+
+important to keep an eye on. Very often, it's the junk that moves first. Okay. So, I
+
+mentioned earlier that there's publicly available indices that you can have access to very easily.
+
+Let's have a look at those.
+
+So the first one, and by the way, all of these are located at the FRED website.
+
+So you can just go in and literally Google the name of these aggregate corporate bond indices.
+
+So the first one we're looking at is the AA.
+
+So we're looking at the ICE Bank of America AA US Corporate Index.
+
+Type that into Google and you'll find the page.
+
+You'll be able to keep an eye on these things for as long as you like,
+
+and as often as you like, and you absolutely should.
+
+So here, this subset, this is basically what we were looking at earlier via Bloomberg,
+
+but a different index, but it's referencing the same credit quality.
+
+It's referencing the same corporate credit quality, the same bonds.
+
+This subset is AA.
+
+It includes all the securities within a given investment grade,
+
+and this one is the AA-rated bonds.
+
+You can also access the lower end of investment grade, the BBB complex.
+
+So if you just type in to a search engine, type into Google, the ICE Bank of America, B of A, BBB US Corporate Index, this should pop up on the FRED website.
+
+Again, this is the lower end of investment grade,
+
+and this is the triple B complex.
+
+Additionally, if you want to keep an eye on the non-investment grade,
+
+the junk, so the triple Cs.
+
+You can get access to that easily as well.
+
+Just type that into Google and you'll find it on the FRED website.
+
+This is the ICE Bank of America, triple C, US corporate index.
+
+So you've got access there to publicly available instruments that you can keep an
+
+eye on, the AA's, the BBB's and the CCC's and use these as potential leading indicators,
+
+leading economic growth and liquidity in the economy and financial markets.
+
+So let's put all this together and try to understand it a little bit better.
+
+In terms of aggregate corporate bond index spreads, okay, let's try to understand it a
+
+little bit better. The price or cost of money for corporates
+
+is very important, okay?
+
+It affects the capital structure of companies.
+
+So equity and debt, okay?
+
+It affects the capital structure
+
+of a huge amount of corporations in the United States
+
+and the rest of the world.
+
+If the cost of debt, so the yield on this debt,
+
+or the spread of the aggregate corporate bond indices
+
+are blowing out, this feeds directly to the bottom line
+
+of pretty much all major US and rest of world corporations
+
+when they're seeking to refinance debt.
+
+And it has a huge impact
+
+on both US and
+
+global GDP growth
+
+through defaults.
+
+It has
+
+a huge impact on GDP
+
+in the
+
+US and global GDP, and it also has a big impact on the level of employment in the economy.
+
+Now, if you remember back to the previous video, we looked at discounted cash flow analysis.
+
+Do you remember that formula? Okay. Well, this is how it ties together. So if you remember that formula where we had the risk-free rate,
+
+and the risk-free rate was the denominator in the fraction
+
+that discounted back all expected future cash flows of the company
+
+to a present value. But what happens when a company's debt becomes more expensive? So
+
+we have a blowout in spreads versus the risk-free rate. Well, those future cash flows, the numerator,
+
+those expected future cash flows are going to be lower
+
+because the cost of their debt has increased
+
+and their future cash flows go down.
+
+And that is obviously assuming that all things being equal,
+
+revenues of the company, et cetera, stay the same.
+
+So if the cost of the debt moves relative to everything else,
+
+and it moves up by a large amount, what happens?
+
+The numerator, the expected future cash flows are lower.
+
+And then when we discount back at the same risk-free rate,
+
+the present value is going to be lower.
+
+And of course, the reverse is true.
+
+If the cost of a company's debt decreases significantly,
+
+all things being equal,
+
+the numerator is going to go higher.
+
+Our expected level of future cash flows of the company is going to be higher. Our expected level of future cash flows of the company is going to be
+
+higher and then discounting back that number creates a higher present value. So
+
+this is how it all links together via the corporate bond market. On top of that
+
+we have to consider another dynamic. So in addition, all things being equal, if money is just generally cheaper,
+
+so we have lower yields in the corporate bond market, what's going to be happening?
+
+Well, market participants will naturally borrow more of it. And this is expansionary.
+
+And then also vice versa. When it's expensive, when money is expensive
+
+and we have higher yields, they're going to borrow less of it. So it's
+
+contractionary. So essentially we have a compounding set
+
+of dynamics. So this is why it's so important to keep an eye on the corporate bond market
+
+and keep an eye on aggregate corporate bond indices and just always have an understanding
+
+and appreciation of what's going on in the market. Aggregate corporate bond indices are a predictor
+
+of expansionary and contractionary economic conditions and the
+
+spreads over the benchmark of various aggregate corporate bond indices are also
+
+an indicator of risk. When the market, the corporate bond market, perceives a
+
+higher risk of contraction in the future, they sell corporate bonds and yields go higher. And this feeds into
+
+risk assets like equities. When the market perceives lower risk, so expansion in the future, they buy
+
+corporate bonds and yields go lower. This again feeds into risk assets like equities. So when we see stress in the corporate
+
+bond market and corporate bonds are being sold and yields going higher, we typically see risk assets
+
+like equities selling off. And when the market is buying corporate bonds
+
+and yields are going lower,
+
+we typically see this feed through to the equities market
+
+and we see stocks going higher.
+
+Now, central banks absolutely know this, of course.
+
+Again, they're not stupid.
+
+The Federal Reserve is not done.
+
+They see this.
+
+They see what we see.
+
+And this is why they are continually looking to manipulate the supply of funds.
+
+So real interest rates in the market.
+
+And they're doing this via setting official interest rates in the market. And they're doing this via setting official interest rates
+
+or intervening in the bond markets to affect market rates.
+
+This is why corporate bond indices
+
+are a good leading indicator at times,
+
+but not always, to equity market valuations.
+
+The Fed is looking at the same things that we are. Now these days
+
+it's more of the case as to how quickly the Fed reacts. So how quickly they're
+
+taking action or not in setting official rates. So by a conventional
+
+monetary policy or even intervening in the bond markets via unconventional monetary policy.
+
+Remember, throughout history, central banks and the Federal Reserve actions can actually panic
+
+markets if they are outside of expectation of the market. They can panic markets as much as they can
+
+placate markets. So you have to be very careful here. There's obviously no rule book. We live in
+
+a dynamic world. Things can change. And the Fed is also watching the same stuff that we're watching. But the Fed can also mismanage expectations.
+
+So be careful.
+
+There is no rulebook.
+
+Just keep an eye on these things
+
+and understand what the bigger picture dynamics
+
+in play actually are.
+
+Now, can retail traders actually trade
+
+aggregate corporate bond indices? What is available to retail traders?
+
+Well, we saw in the IPLT video series when we looked at bond products like ETFs, they are
+
+extremely limited in their volatility and they constitute a very small opportunity set. So they can't
+
+really be utilized by traders for large amounts of trade ideas and consistent
+
+profitability. But retail traders can look at various corporate bond products as
+
+indicators of expansion and contraction. In addition to what we learned in the
+
+previous video, in addition to real rates and the treasury yield curve, and what we've covered in
+
+this video, corporate credit spreads. But they could also be used potentially as turbo hedges to portfolios,
+
+or just very short term directional bets on economic turning points, getting leverage through options.
+
+Now we've listed some corporate bond products that are tradable for retail traders at the time
+
+of recording. If these products are delisted in the future guys or new
+
+products become available, please do your homework yourself on each of the
+
+products. Just make sure that they're liquid, they're tradable, and they have an active options market.
+
+First up, we have the LQD, which is the iShares, iBOX,
+
+US dollar investment grade corporate bond ETF.
+
+This is the biggest and most liquid product
+
+at the time of recording.
+
+We've got the VCSH, which is the Vanguard short-term investment grade.
+
+We've got the VCIT, which is the Vanguard intermediate-term investment grade,
+
+and the VCLT, Vanguard long-term investment grade. There's also the HYG, which is
+
+similar to the BBBAA aggregate index that we looked at.
+
+And then we've also got the JNK, which is a jump bond.
+
+This is basically an index holding everything from C to CCC.
+
+So it's similar to the CCC aggregate index that we looked at.
+
+And this is basically junk
+
+bonds non-investment grade a subset of bonds below investment grade so in the
+
+junk complex for international corporate bonds in Europe Japan UK etc just use
+
+this video as a template all the same principles apply that you've learned here.
+
+Just use it as a template.
+
+Tying this all together with the stuff we learned in the previous video
+
+on real interest rates and the yield curve.
+
+Let's just quickly go over that again.
+
+Real interest rates, what do they represent?
+
+The real price or cost of money.
+
+It can be used as a leading indicator for the future expectations of risk asset values,
+
+like the stock market, and for traders and PMs to potentially act in the present
+
+in order to benefit from future moves.
+
+in the present in order to benefit from future moves. The yield curve that we covered in the previous video
+
+represents the market's expectation of short-term versus long-term risk in the economy.
+
+And therefore, risk to risk assets like equities, like the S&P 500, so the stock market. And we can use the yield curve as well as traders
+
+and PMs to potentially act in the present to benefit from future moves. In addition, in the
+
+current video, corporate credit spreads over the 10-year Treasury benchmark.
+
+This represents the risk of default and therefore the market's expectations of both expansion
+
+and contraction of GDP and the economy as a whole.
+
+We need to be on top of these indicators because we want to predict GDP, we want to predict earnings and we want to
+
+predict the direction and the magnitude of S&P 500 quarterly and annual returns. We need
+
+to know which way the wind is blowing. Knowing which way the wind is blowing is crucial to us. It's crucial
+
+to traders. Why? So we can make money from the moves and also so we don't get caught out
+
+in losing positions that stand little to no chance.
+
+of going in the direction that we expect
+
+because there's been a change
+
+in the macroeconomic environment.
+
+The macroeconomic environment is the big picture, guys.
+
+The macro is the big picture that affects everything.
+
+So we have to be on top of the macro picture
+
+in generating a macroeconomic view so we build better portfolios.
+
+Okay.
+
+We want to make sure that we're making money out of these moves and we want to make sure
+
+that we're not doing anything stupid.
+
+Okay.
+
+All of this obviously does come with a caveat because the Fed is on top of this stuff as
+
+well.
+
+come with a caveat because the Fed is on top of this stuff as well. Obviously we are trying to predict future moves in the markets and using the bond markets as a leading indicator.
+
+We have to be very careful where if we think the market, the economy is going to go into contraction and the market's going
+
+down, that we have to be very careful that we think that the Fed is not looking.
+
+Of course they are.
+
+Because of Fed actions, there is no rulebook here that states what you exactly have to do or must do in equities, whether that's buying
+
+or selling, when you see these indicators move. So for example, when you see short-term real rates
+
+rising or falling versus long-term real rates falling or rising. When the yield curve is in
+
+transition, so when the yield curve is flattening or steepening,
+
+or when credit spreads are widening or tightening, okay? There's no rulebook that says exactly
+
+what you have to do. You have to be on top of it and you have to try and make informed
+
+decisions. So you can use these indicators and your understanding of them in conjunction with
+
+the best practices that we've learned in the equities market and what we're going to learn
+
+throughout this video series and especially when you see the VIX in transition. Okay.
+
+transition. Real rates, the yield curves and credit spreads are leading indicators to economic expansion and contraction and financial markets risk and direction. So risk assets, expectations
+
+and possible Fed actions. Key word, possible. So we've got to be on top of it. We've got to manage our expectations.
+
+But the caveat is when we're positioning in the market,
+
+we have to understand that things can change very quickly
+
+because the Fed can intervene and take action.
+
+Use these indicators.
+
+real rates, the yield curve, and credit spreads in conjunction with the VIX.
+
+Now seeing as though we've just digested a lot of information over the last two
+
+videos in the government and corporate bond markets and leading indicators from
+
+those markets, let's have a little reminder of what we're doing here.
+
+We are essentially trying to process a systematic framework and teaching you what a professional
+
+trader systematic framework actually is. Okay. And we started out by looking at the macro picture
+
+and looking at a quantitative process
+
+of the macroeconomic picture.
+
+That is driving the fundamental area,
+
+the fundamental work that we do
+
+when we're generating trade ideas. So what we're doing here is we're operating at the macro level
+
+and we're attempting to understand from the macroeconomic picture
+
+which way the wind is blowing and therefore what bias we are likely to have in our portfolios.
+
+bias we are likely to have in our portfolios. A bias being a net long portfolio, a net short portfolio, or a neutral portfolio. And if you imagine at any point in the future, what you will have is you will have a long, short, or neutral macro view, macroeconomic
+
+view on the United States and the rest of the world and globally. And you will build portfolios
+
+according to that bias. And what we're trying to do here is use the bond market as indicators of the future health
+
+of the economy, which gives us a bias.
+
+It gives us a predisposition, whether we want to be net long, net short or neutral.
+
+And we're not using the instruments themselves
+
+in the bond market to express this view.
+
+What we're doing is we're building stock portfolios
+
+and stock portfolios that are affected
+
+by these indicators, okay?
+
+Stock portfolios are obviously affected by GDP. So we end up with our bias predicting GDP using these indicators, whether we want to be long, short or neutral in our portfolios. And then, of course, we're going through these
+
+entire pro trader systematic framework to generate each individual stock idea within our portfolio.
+
+Now we obviously have a very long way to go in the video series. We're still just scratching the surface
+
+here. I hope. But in terms of a systematic process or framework,
+
+throughout the video series,
+
+and we mentioned this earlier in the video series,
+
+but throughout the video series,
+
+we're going to be adding inputs to each area of the process,
+
+to each area of the framework.
+
+Okay. area of the process, to each area of the framework.
+
+The framework itself in the PTM video series is adaptable to any market.
+
+And it's timeless.
+
+You will still be able to use this framework 10 years from now, 25 years from now.
+
+It's not going to be a problem in terms of usefulness. Okay.
+
+What may change in the future is the inputs, but the framework itself is timeless and it's
+
+adaptable to any market.
+
+Okay.
+
+At different stages of the framework, you can choose to add your own processes, your own
+
+inputs to each area of the framework. This is
+
+absolutely, totally acceptable and we of course encourage you to do this. What we're going to be
+
+doing in the PTM video series is going over all of the main ones that you should have in there.
+
+If you want to add stuff in, as long as it's in the spirit
+
+of increasing your odds of making money,
+
+then feel free to add your own inputs and processes
+
+to each area of the systematic process,
+
+the professional trader framework.
+
+And also after digesting a lot of information,
+
+it's often beneficial to remind ourselves
+
+of the ITPM principles.
+
+We have four principles, if you remember.
+
+Firstly, self-sustainability.
+
+Second, work ethic.
+
+Third, free information.
+
+Four, working smart, not hard, okay?
+
+Self-sustainability.
+
+We're giving you the tools so that you never, ever have to rely on anybody else,
+
+not even ITPM.
+
+You need to be a self-starter, okay?
+
+Second, work ethic.
+
+Do not be scared of the work.
+
+We've been through a couple of videos now
+
+and you've seen an example of the work
+
+that we do and the work that we expect you to do as a student of financial markets. Once you understand
+
+it, it's fairly straightforward. Your processes when you're going online, when you're doing
+
+your weekly processes,
+
+they're going to get quicker the more you practice.
+
+Keep going, the hard yard's on now.
+
+Third, free information.
+
+You can obviously go out online
+
+and get publicly available information,
+
+publicly available data.
+
+Anyone can do this, okay?
+
+But the interpretation of that data
+
+is way more important than obviously having some sort of software subscription or just being able to get access to it.
+
+At ITPM, we stick to the principle of making money first.
+
+You do not have to pay for further resources.
+
+You can see now from the information that we've looked at in the last couple of videos, all of this information that you've seen is freely available.
+
+You do not need to ever pay for anything.
+
+Do not pay for anything at all when you're starting out. Make money first. And then if it makes sense to do so, and the cost is covered by a huge multiple of your profits, okay,
+
+then it may make sense to do so if it's saving you some time.
+
+Lastly, working smart, not hard.
+
+There's obviously a minimum that you have to work on this per week,
+
+but there's also a maximum as well.
+
+Do not go down rabbit holes.
+
+Do not spend 50 hours a week looking at the bond markets.
+
+You can take a very simple approach.
+
+Just take the approach that you accept that there's a minimum that you have
+
+to do, but there's also a maximum. Get the best out of the hours that you put in. Get
+
+the most out of those hours. It's a very obvious statement to make, but you've got to work
+
+efficiently. Work smart, not hard. Okay, guys, we've come to the end of video number five. We've
+
+covered government bond markets, we've covered corporate bond markets and we've
+
+basically taken some very useful information from there and information
+
+that we can use as leading indicators to economic growth and liquidity.
+
+Let's go back to the desk for a quick recap.
+
+Okay, guys. So welcome back to the desk. So it's all pretty straightforward stuff with real rates and the yield curve and corporate
+
+bonds and credit spreads.
+
+Once you understand the definitions of everything and the relationships of how everything works
+
+together and what it means, it can all be very straightforward.
+
+So for real interest rates and the yield curve, we are in the government bond market.
+
+We are in the sovereign bond market.
+
+And from this market, we derive a benchmark, our 10-year treasury rate.
+
+And we have a term structure around the benchmark, and that is the yield curve.
+
+yield curve. Now from that we are gauging both liquidity and risk sentiment as leading indicators to stock market direction and GDP growth direction. Now in the corporate world, so for corporations,
+
+we have aggregate corporate bond indices and that is across our various credit ratings. And their spreads is what we
+
+analyze over the 10-year benchmark rate. So this again provides us with leading indicators
+
+to both stock market direction and GDP growth direction, because we are, again, but in the corporate world, assessing liquidity
+
+and risk sentiment in the corporate credit market. Now, there's obviously multiple Excel downloads
+
+accompanying videos four and five. And it's very important that you update them regularly and be on top of them. It's really crucial to
+
+building your macro view as part of the overall trade idea generation process. Okay, so now we're
+
+going to move on to video number six. We're going to give you an accessory that you can use in conjunction with your money market leading indicators.
+
+We're now going to look at M2 money supply. Now in this video, you're also going to get
+
+your first spreadsheet lesson in the PTM video series from Christopher Quill, who is the
+
+Institute's quantitative research analyst.
+
+Let's get into the video,
+
+and I'll see you back at the desk after the screen lesson.

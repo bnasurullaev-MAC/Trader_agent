@@ -1,0 +1,2025 @@
+Hi guys and welcome back to another spreadsheet class.
+
+Over the course of the next two videos I'm going to teach you how to track and record your own trading statistics to help you understand and analyse your performance as a trader.
+
+The outcome will lead to things like improved discipline in your approach to trading and managing your own portfolios,
+
+as well as quicker progression through the competency hierarchy because it's going to enable you guys
+
+to identify your own styles of trading and any mistakes you might be making. In this video we're
+
+going to consider some of the more basic requirements for tracking trader performance.
+
+So here's a list of the stuff that we're going to cover. We're going to look at how to track your
+
+live portfolio to understand your unrealized profit and loss and also how to track your live portfolio to understand your unrealized profit and loss and
+
+also how to track your trade history and so your realized profit and loss can also be calculated
+
+and from that realized profit and loss data i'm going to show you how to calculate various
+
+performance statistics so that's going to include things like your aggregated dollar wins versus losses, percentage wins versus losses, your R score,
+
+your distribution of realized returns. And we'll also look at aggregating the unrealized and
+
+realized profit and loss in order to help monitor portfolio performance. And from that data,
+
+I'll show you how to calculate even more performance data. And that's going to be
+
+things like your mean portfolio return, your total portfolio return, your portfolio
+
+standard deviation, your portfolio downside deviation and equity curves to
+
+track your portfolio performance as well. Then what we're going to do in the next
+
+video is we're going to build on all of that and add some more advanced
+
+statistics so that will kind of give you a really good in-depth understanding of your performance.
+
+Now in that video I'm going to be discussing the Kelly criterion and running some Kelly simulations
+
+as well. I'm also going to introduce a bunch more performance metrics including
+
+your realized trade time horizon distribution, max drawdown of the portfolio, gross sharp ratio, gross sortino ratio and the calmar ratio as well.
+
+Now aside from showing you all of that stuff across the two videos, I'm also going to make sure you have access to the spreadsheets that I use throughout these videos in the associated download folders and the idea here is that by
+
+using these videos as guides you'll also be able to manage your own track records
+
+in the spreadsheets provided and we suggest ITPM updating those on a weekly
+
+basis probably at the weekend when the market is closed is a good time to do it
+
+and it is really important that you try to stay on top of this stuff
+
+because maintaining your track record is essential for being able to improve your trading. Now if
+
+you're worried about the workload, don't be. You will most likely be able to get all of your trade
+
+data from your broker and that will help you keep on top of this stuff.
+
+and it will all soon become a habit anyway once you've kind of carried out this process for a few
+
+months with the help of the spreadsheets that we've got. It's worth pointing out as well guys that if
+
+you are on the ITPM mentoring program you will have to keep on top of your own track record.
+
+It is a requirement when you're on the program to do so. Okay so with all of that stuff covered
+
+let's head over to Excel now and get started.
+
+So, the spreadsheet that you guys can see in front of you now contains performance data for a model portfolio,
+
+which I've created to essentially simulate what a pretty good ITPM student's unleveraged portfolio might look like after, say, a year, a year and a half to two years of trading. I
+
+thought using an example like this would be the easiest way for me to show you
+
+guys both where we're headed at the beginning of each video but also to
+
+explain all the various components of the spreadsheet and how they can be
+
+utilized in analyzing trader performance. After doing that I'm then going
+
+to go on to how you can build a
+
+spreadsheet like this yourselves. And as a bonus at the end of the next video, I'll talk you through
+
+just very briefly how to use a template download file to speed all of this up a little bit. And
+
+that template file will be available to download in the next video. Now, all of the data that you see in this file is based on real positions and as I said
+
+it's been created in order to provide an example of what a pretty good ITPM students unleveraged
+
+portfolio might look like after almost a couple of years of trading. Okay so let's have a look at the
+
+file now and you can see that it contains three tabs within it. The first one is a portfolio
+
+monitor which allows you to keep track of your live positions and what we call your unrealized
+
+profit and loss. Secondly we have a realized profit and loss sheet which is essentially a
+
+log of every closed trade in the account so far and inside this sheet there are also quite a few statistics to
+
+take a look at which help you understand your trading performance and
+
+I'm going to talk through all of that shortly. The final sheet is the portfolio
+
+value sheet and that basically takes the realized and unrealized profit and
+
+loss data from the other sheets and combines it to track the value of your
+
+portfolio over time. As well as sort of monitoring portfolio
+
+value this sheet also contains some further trading statistics and that's going to help you guys
+
+understand you know how well you're doing as well as potentially strengths and weaknesses so we use
+
+that sheet in combination with mostly the realized pnl sheet to kind of analyze performance and find strengths and weaknesses and then obviously
+
+look for areas to improve. Now as a quick note guys
+
+what you see here is just the basics. So
+
+that's all the stuff that I'm going to explain in this video. In the next video
+
+I'm going to be expanding on this
+
+with a few more advanced statistics to look at as well.
+
+Okay, let's have a look at things
+
+in a little bit more detail now,
+
+starting with the portfolio monitor.
+
+This is a very simple sheet,
+
+which is used to basically log whatever the open positions
+
+are in your current portfolio.
+
+The white cells require user entry,
+
+whilst the blue ones are automated calculations.
+
+And as you can see in this example
+
+portfolio we've got 13 positions, seven of which are longs and six are shorts. For each of those
+
+positions there are various items logged in the white cells such as basic company details,
+
+trade entry dates, whether the positions are longs or shorts, the size of those positions in terms of the number of shares,
+
+and also what both the weighted entry and current prices are.
+
+And I'm going to talk about what the weighted entry price is a little bit later when we go through building these sheets from scratch.
+
+So don't worry too much about that just yet if you don't know what it is.
+
+Beyond that, in the blue blue cells there are some calculations
+
+which have been run based on the data we've just talked about. So in column I you can see the gross
+
+exposure calculation for each position which is simply the current price multiplied by the number
+
+of shares. That gives you an idea of the effective dollar weighting applied across each position in the portfolio. So we can see that here for
+
+example Global E online stock has an almost $32,000 gross exposure whilst Thor
+
+Industries has closer to $16,500. So in terms of dollar exposure with
+
+comparing those two stocks we can say that the globally online position carries almost double the weighting that Thor Industries does.
+
+However, if you remember back to video 20 that doesn't actually represent the full picture because it doesn't account for the volatility of these assets or their sort of market exposure, which is where something like beta as a statistical measure can be more helpful.
+
+At the bottom of the gross exposure column you can also see a figure which basically sums up
+
+gross exposure for the entire portfolio and you can see here that's around $339,000 for this
+
+portfolio. In column J we've got the calculation for net exposure for each position
+
+which is just the gross exposure multiplied by one for long positions or minus one for short positions
+
+and when all of those positions all the net exposures for those positions are aggregated
+
+you can see that you get a total dollar net exposure for the portfolio in cell J24. And that basically tells you whether the entire portfolio is dollar net long, dollar net short or neutral.
+
+And here we can see the value that we have is around $93,000, which means that the portfolio is net long, at least in dollar net short.
+
+terms. If that value was negative it would mean that the portfolio is net short
+
+and if it was close to zero it would be considered neutral. Additionally in cell J25
+
+we've got a calculation for what the total net exposure is as a percentage of
+
+total gross exposure and that just makes it easier to understand how exposed you
+
+are in dollar
+
+terms to the long or short side.
+
+The point of monitoring these gross net exposure values is that it gives you a basic understanding
+
+of the level of risk you're running in the portfolio and also what the balance is like
+
+across positions and across the whole portfolio. The value that we see here for percentage
+
+dollar net exposure is 27.51%, which on face value is kind of a pretty strong long bias in the
+
+portfolio. But remember what I said previously in video 20, the detail of this can be expanded on
+
+much further by actually considering beta, the portfolio beta value.
+
+But at the very least, if you're not looking at beta, you do want to be monitoring your dollar gross and net exposures at both the position and the portfolio level like we've got here.
+
+So columns K and L calculate the profit and loss for each position in both percentage and dollar terms respectively.
+
+And finally, the dollar profit and loss column is aggregated in cell L24,
+
+which tells us the total unrealized profit and loss that this portfolio is running at the last date that it was updated,
+
+which you can incidentally see here in cell C1 was the 21st of November 2021 in this case.
+
+By the way, when we call this unrealized profit and loss, it's because, as I said previously,
+
+the positions in the portfolio are still open positions. And so their value is being marked
+
+to market. But until they're closed, none of that profit and loss is actually realized into the
+
+trading account. So in this example the unrealized profit and loss is almost $20,000 and most of that
+
+actually if we look in a little bit more detail most of that actually comes from one position
+
+which is the long iRhythm Technologies position which as you can see is in about $13,000 of profit.
+
+You can also see that the iRhythm position is the largest position in the portfolio,
+
+certainly in dollar terms based on gross exposure, which is typical actually given that it's the best performer on the long side.
+
+Successful long positions remember increase in exposure
+
+without doing anything simply because the price of the underlying asset goes up. But not only that,
+
+if the position is being managed well it's probably being added to as it continues to make money as well.
+
+So given that huge 40%
+
+67% profit that we see in this position, we would probably expect that position to be the largest in
+
+the portfolio. And if we were going to analyze this portfolio in detail, what we could do here is check
+
+what's actually happened there to see if the portfolio has been, or sorry, position has been
+
+added to as we would expect. I'm not going to go and do that now, but it is an interesting thing
+
+to look out for. And paying attention to details like that is important when analyzing your own performance or other people's performance in this kind of style.
+
+So that sort of thing, basically how position weightings compare to position performance and whether it makes sense, is the sort of thing that you want to be paying attention to in this particular sheet.
+
+As well as of course the high level statistics like the net dollar exposure and of course
+
+the unrealized profit and loss.
+
+Now in the next sheet we're going to look at much more in-depth analysis regarding the
+
+positives and negatives of this trades performance by diving into their realized profit and loss.
+
+Let's have a look at that now then and in this tab you can basically see a record of all
+
+of the realized and that is closed trades from this trader's account and also some of
+
+the associated statistics based off of those closed trades.
+
+So let's start by looking at the individual trade data that we have in this table here
+
+running from row six down. The first column column A just logs the number of
+
+trades closed and their order. Then in columns B to I each trade has various
+
+details logged with it. So similarly to the open positions that we looked
+
+at in the previous tab, we've got the ticker, company name, whether the position is a long or
+
+short, and the number of shares traded. Then we've also got the weighted entry and exit prices,
+
+and also an entry and exit date. Now, as I said previously, I'm going to clarify what weighted pricing means
+
+a little later in the video when we talk about how to build this spreadsheet yourselves. But I think
+
+the rest of the data entries that we've got here should be pretty self-explanatory.
+
+Again, similar to the previous sheet, the color coding is the same, so white cells in this table are the ones that
+
+require manual data entry whilst blue cells are formula driven.
+
+So if we take a look at the blue columns now, firstly we've got the number of days in the
+
+trade for each position, then the percentage profit and loss, followed by the dollar profit and loss for each position or each trade.
+
+And finally, what we call a win score.
+
+And the win score basically just identifies
+
+whether each trade was a winning trade
+
+by marking profitable trades with a one,
+
+and loss making trades with a minus one.
+
+In the trade data, you can see that we've got a distribution of returns over here for all of the closed trades that we've got.
+
+And this is built in exactly the same way as you guys have seen in previous videos.
+
+So, you know, in, for example, money supply video and all the other videos that we've done distributions in.
+
+And as well as the distribution and histogram chart here, I've also added a couple
+
+of measures of centrality for this returns data. So those measures being the average in cell P35
+
+and the median in cell P36. On top of that, I've also included here the average values for both
+
+positive and negative returns. Finally, on this sheet at the top above the
+
+individual trade data you can see some summary statistics which help understand trader performance at an
+
+aggregated level. So on the left hand side here we have the number of winning trades versus the number of
+
+losing trades and also the total number of trades logged. Then we have the
+
+aggregated dollar value of all winning trades and all losing trades and underneath that we can net
+
+those two figures to see the total dollar profit or loss. In column I we've just got the percentage
+
+number of winning trades and the percentage number of losing trades.
+
+And then finally, in cell K2, we have the R score for all closed trades.
+
+And that is basically just the ratio of the dollar gain on winning trades divided by the dollar loss on your losing trades.
+
+Okay, so let's talk about some of this stuff in more detail now and analyze the performance of this trader so far.
+
+Firstly we can see that 116 trades have been closed over a period of almost two years.
+
+We know that because if we look at the first trade logged it had an exit date of the 20th
+
+of February 2020 and then if we scroll
+
+down to the bottom of the table the last one has an exit date of the 15th of November 2021.
+
+If we look at the summary stats next at the top of the sheet you can see that about 56% of the
+
+trades have been winners and that might not sound like much since it means 44% were of course losing trades.
+
+But when you think about the performance of your portfolios, you need to understand that
+
+fine margins really matter. Even having a few percent more winners than losers over
+
+time will result in much more profit than loss, all else being equal at least.
+
+The other thing to consider is that if your risk management
+
+is good, it should mean that your winners are typically of greater magnitude than your losers
+
+anyway. So that benefit goes even further. We can verify that in this sheet by looking
+
+at the returns distribution section on the right hand side and we can see that
+
+the average positive return for this trader is 21.6% versus the negative
+
+average return being minus 13.09% so this trader has a decent bit more
+
+winning trades and losing trades and the average magnitude of those wins are
+
+quite a bit larger than the losses.
+
+So this is all looking pretty good so far. If we consider the R score for this trader it currently
+
+sits at 1.8 so that means that his or her profits have been 1.8 times larger than their losses and
+
+again that's pretty good if you think about it from a risk management point of view we want to create targets around three times our stops for individual trades so if we had 50 winning and 50 losing trades and reached our target for all of our winning trades and our stops all of our losing trades then our score would be three now clearly that's pretty unrealistic over the long term since we aren't going to reach
+
+our targets on every winner especially but that being said if you were to have way more winning
+
+trades and losing trades then it does become a little bit more achievable to have an r score
+
+you know towards three um but that that is really really And in fact, if we're talking about sort of what represents good R scores, I'd say overall an R score in the range of 1.5 to 2 is pretty good.
+
+And anything above 2 actually is very good.
+
+performance with summary statistics like the R score, it only really becomes valid after you've traded for a decent amount of time and made a good number of trades. And typically, you know,
+
+that applies to all statistics, all of these performance statistics that we're going to look
+
+at at least, they all become more meaningful after, say, a year or so, and then much more
+
+meaningful after three years of trading.
+
+So let's dive a little bit deeper now into this traders realized performance by
+
+looking again at the distribution of returns on the right-hand side. We know
+
+that on average this account is making money but what we're looking for here is
+
+a good-looking distribution and what I mean by that is we want to see a distribution of returns that reflects proper risk management.
+
+We don't want to see massive losers, which would result in negative skew in our distribution.
+
+We want to see massive winners and controlled losers resulting in a positive skew and that would be a really good reflection of good risk management based on what
+
+we've taught you guys about setting proper stops and targets for individual trades. So we can see
+
+here by looking at the chart that this trade is getting it roughly right. The vast majority
+
+of returns are landing anywhere between looks like plus 15% and minus 15% and if
+
+we select the frequency of data that covers those returns those returns limits
+
+anyway plus 15 to minus 15% then you can see with those cells selected it
+
+accounts for 56% of the data and we can tell that by looking at the quick summary
+
+stats that Excel provides in the bottom right when you select a range of cells. So there is a slight
+
+positive bias within that range that I just mentioned but basically it's split
+
+down the middle between positive and negative returns. So why do I say this
+
+returns distribution looks quite good? Well, if you look outside of that central
+
+range, plus 15% to minus 15%, you'll see that only around 16% of trades have losses greater than
+
+minus 15%, whereas almost 28% of trades have profits greater than 15%. Not only that, but you
+
+can see that this trader hasn't lost more than
+
+35% on any single trade, but yet has made well over 70% on some of their profitable trades.
+
+All that points to a really good positive skew in the distribution of returns and largely
+
+reflects good risk management. If instead for example there were lots of losses in
+
+the account then it could mean that either stops aren't being set properly
+
+properly or they're being ignored and losers are being let run. Equally if we
+
+saw anemic positive returns it could be because winners are getting cut too early.
+
+But that being said there is of course still
+
+room for improvement here. This isn't perfect just because it's kind of a good looking distribution.
+
+Some losers are probably still being running past their stops, given that, you know, some trades are
+
+losing 30 to 35%, for example. So you can see how looking at some summary statistics and a distribution of
+
+returns for realized profit and loss can give you a really good insight about trader performance,
+
+certainly at a kind of high level. And that's just the first step though, because once you think
+
+you've identified some potential issues that you want to look at using these summary statistics,
+
+potential issues that you want to look at using these summary statistics, then you need to go into more granular detail to find out which particular trades contributed towards certain problems and why.
+
+Doing that will typically require returning to the individual closed trades table and running some
+
+filters on that table. So let's do that now. To add a filter on the table I'm just going to select
+
+any one of the table headings in the table and go to data on the ribbon followed by filter. From here
+
+we can just filter or sort the closed trades based on what we want to investigate. So for example
+
+we could sort the trades by percentage profit and loss by choosing the appropriate filter
+
+and selecting sort smallest to largest. You can see then when I've done that that the worst
+
+performing trades are those at the top of the table whilst the best performing ones are at the
+
+bottom. Now if we were going to go into proper detail here to try and identify why some of those losers were so big we could go through them
+
+sequentially and have a look at things like past charts for each of these stocks and fundamentals
+
+as well over the sort of period that covers the entry to exit dates for each trade now i'm not
+
+going to go through all of that here but it is something that you might want to do with your own portfolios to identify problems. One of the things though that does stick out a little bit about these
+
+losing trades that we can see here is that perhaps some of them are being run for a little too long.
+
+So for example if we look at this short Harley-Davidson trade that was run for 87 days that's right top and of how long
+
+we want to hold a position and the way one that a topic the days in trade column
+
+that we're looking at here counts calendar days not trading days so 20
+
+trading days is about 30 calendar days therefore 60 trading days is about 30 calendar days, therefore 60 trading days is about 90 calendar days.
+
+So 20 trading days or 30 calendar days represents about a month.
+
+And obviously 60 trading days and 90 calendar days represents three months.
+
+That is our kind of typical trading time window that we want to execute trades within or to run trades for as long as. So equally,
+
+if we look at these trades again, and we look at the Las Vegas Sands trade, that's that lasted 96
+
+days. Tesla, for example, 70 days, Chewy 70 days. And in fact, none of these positions have been
+
+cut particularly early. so it really does seem
+
+like here that there could be some improvement in terms of cutting losses this trader could probably
+
+go from what is already quite good performance it looks like certainly from what we've seen so far
+
+to i would say excellent without too much problem just based on what we've seen here.
+
+That being said though again we can't say that for sure without investigating what actually
+
+happened in detail with each of these positions in turn and looking at the historical charts and
+
+fundamentals and so on. Another way to filter and sort this individual trade data would be through the days in trade column.
+
+For example, if we sort that column by smallest to largest, we can see that there were some trades here that were closed very, very quickly.
+
+On the face of it, that column is closed.
+
+could be a bit of an issue but if we look at when those trades took place in this example
+
+they were kind of in the peak of the covid panic so march april time in 2020.
+
+you know at that time the vix range between about 40 to 80 so volatility was off the charts so i
+
+wouldn't say looking at these trades in particular, that there's a
+
+particular issue here because it's highly probable that trading on such short timeframes was actually
+
+completely justifiable given the market conditions at that time. And in fact, that gives me another
+
+idea for how you could filter this data. You might want to analyse how you performed within certain distinct periods of time whether it be
+
+because there were macroeconomic shifts happening at those times those times or because you made some
+
+fundamental changes to how you were actually trading. So for example in this portfolio we could
+
+filter the entry dates for any time from say February 2020 to April 2020
+
+to see how this trader performed when Covid uncertainty hit global markets. To do that we
+
+can click on the filter option for the entry date column and deselect all of the dates. Following
+
+that we can just select the period that we want to be using or look at by using the checkboxes at the bottom here.
+
+So I'm going to be looking in the year 2020 in the months of February, March and April and then pressing OK.
+
+OK, so what we can see here is that actually the performance through this chaotic period was actually pretty good.
+
+There's actually higher than average profits and nine winning trades to three losing ones.
+
+So it looks like this trader actually coped pretty well with this period of higher volatility.
+
+So that's again, you know, another way you could use all this data to kind of
+
+conduct further in-depth analysis. So that's all I'm going to go through on the individual trade
+
+data table. I just want to give you an idea of the kind of ways that you can use the table to
+
+identify potentially strengths and weaknesses in trading performance through your closed trades.
+
+potentially strengths of weaknesses in trading performance through your closed trades and hopefully all of that made sense especially when combined with the summary data that we looked at
+
+previously. Just remember that when you are done using the filter and sort options to then
+
+re-sort the data by trade number again so that everything's you know back to normal and in the
+
+original order that you actually entered these trades into the spreadsheet.
+
+We can do that here just by using the filter option on the trade number column and choosing smallest to largest.
+
+So now that we've looked at both realized profit and loss and unrealized profit and loss,
+
+through the portfolio monitor, let's go over to the final sheet now, which is called portfolio value.
+
+Now, the idea of this sheet is to record the value of your portfolio over time on an aggregate level,
+
+combining both the realized and unrealized profit and loss, as well as some other items
+
+like deposits, withdrawals and trading costs. And this sheet basically adds a bit more detail to the portfolio returns index and value columns
+
+you've already seen previously in the portfolio volatility video and the portfolio volatility
+
+spreadsheet for example and incidentally you can quite easily add a portfolio volatility
+
+assessment onto this sheet if you wanted to just like the one that you saw in video
+
+18. So let's have a look at what we've got here. Firstly in the table at the
+
+bottom starting in row 18 we have some raw data which requires users to input
+
+values into the white cells and also we've got some calculations running
+
+alongside those in the blue cells. On a regular basis you're going to
+
+need to update this table with various items which will allow you to calculate
+
+your portfolio value, your portfolio returns and a portfolio index. And derived
+
+from that data you can calculate some other summary statistics, a few of which
+
+we're going to cover in this video and the rest in the next one.
+
+So looking at this table on a weekly basis, we've got columns to record the date, the unrealized profit and loss, the realized profit and loss, any cumulative trading costs, deposits that we make
+
+into the account and withdrawals from the account. From that data in the blue column some calculations are run
+
+which compute the net deposit, the net the cumulative deposit, the portfolio
+
+value, portfolio return and portfolio index value. At the top of the sheet based
+
+on those figures I've just mentioned so the blue calculation cells various
+
+returns and risk metrics are calculated as well as
+
+some charts that have been plotted to show portfolio performance over time. And I'll explain
+
+how all of that stuff's built and worked out later in video. But for now, let's just consider
+
+again the performance of the trader that we're looking at, which for this sheet we can do
+
+just by looking at the summary stats and the charts at the top of the
+
+sheet. So to begin with you can see here that the data has been recorded on a weekly basis.
+
+So the mean weekly return for the portfolio is about 0.5 percent. Converting that to a more
+
+meaningful annual return yields 29.42 percent and that's a pretty strong annual return especially
+
+for an unleveraged portfolio like this one. The total return over the entire history of
+
+the portfolio stands at 57.22% over about one year and 10%.
+
+months. On the risk side of things the standard deviation of the portfolio is 2.44% on a weekly
+
+basis and 17.58% on an annualized basis. We're going to look at some more complex performance
+
+stats in the next video but already at this stage you can see that on an annual basis this trader
+
+has a fairly decent risk return profile just based on those two statistics alone.
+
+So the annualized return and the annualized standard deviation.
+
+One thing that I've added here we haven't looked at before is something called a downside deviation.
+
+And this is basically just the standard deviation of negative returns rather than all returns.
+
+negative returns rather than all returns. The logic behind calculating this metric is that as traders and portfolio managers we're not actually concerned with controlling upside volatility,
+
+only downside. So with that in mind it's of interest to us to calculate a volatility statistic
+
+that only really considers negative returns and that's basically what the downside deviation does. Now as a number on its own
+
+it doesn't mean all that much but it does become very useful when comparing its value across
+
+portfolios or assets and also when it's used in more advanced performance metrics as we'll see in
+
+the next video. Let's move over to the charts now which basically
+
+just give us a visual of the data that we can see in the table below. We've got in the first chart
+
+here a plot of the value of this portfolio over time in dollar terms. So you can see that the value
+
+of the portfolio started at around $150,000 in January 2020
+
+and ends at about $350,000 in November 2021.
+
+Now those of you with a keen eye will be asking straight away how it can be that the total
+
+return of the portfolio is only 57% over that period when the value of the portfolio in
+
+dollar terms almost doubles or more than doubles I should say.
+
+Well before I answer that let's look at another thing that's going to stick out to you guys here
+
+which is that in August September 2020 time there is a massive spike upwards in portfolio value very
+
+quickly. Now this spike wasn't actually due to portfolio performance. This was just an
+
+injection of cash. Specifically it was $100,000 put into the trading account, deposited into the
+
+trading account. To make that clear I've plotted a black dotted line on the same chart here which
+
+shows the cumulative deposit amount into this trading account over time. So looking at this black line, we can see that 150K was deposited initially,
+
+followed by another deposit in August, September time of 100K.
+
+And since then, there's been no further change in that black line.
+
+So no further deposit or withdrawal from the account.
+
+account. Okay, so let me circle back to the total return performance of 57% that I mentioned earlier.
+
+The reason why the returns performance of the portfolio over this period isn't measured as
+
+simply the ending value of the portfolio divided by the beginning value of the portfolio minus one,
+
+so that is the sort of arithmetic returns formula, is because if we did that we wouldn't be accounting for any deposits
+
+or withdrawals made in between those dates. We can't say that by depositing money in our accounts
+
+we are creating positive performance or conversely by withdrawing money we're creating negative
+
+performance. All performance metrics must be measured independently of account deposits and withdrawals. So the 57% total return measure
+
+represents the true total return of the portfolio over the period analyzed, adjusted for deposits
+
+and withdrawals. So how do we calculate that? Well, I'm going to get into that later when we look at
+
+building out this spreadsheet. But put simply simply basically what we're doing here is adjusting
+
+our portfolio returns so that they're not skewed by net deposits and then we create a portfolio
+
+index from those returns and after that it's fairly easy to take the end value of the index
+
+divided by the beginning value of the index and subtract one so using our arithmetic returns formula. So anyway that's the first chart. It shows
+
+you the total portfolio value in dollar terms and also the cumulative deposit to the account so that
+
+the user has some reference regarding performance. To build on that and to judge portfolio performance
+
+in a cleaner way we also have a portfolio index chart which indexes
+
+the portfolio to a value of a sorry 100 at the beginning of the period and then that index
+
+increases or decreases based on the true returns of the portfolio so this yields a more insightful
+
+picture of what this trader's performance has actually been like over the period.
+
+So for example here we can see that the index value currently stands at 157 in November 2021
+
+which is where our 57% total returns comes from. As I said before that's really good going for an
+
+unleveraged portfolio over a year and 10 months but not only that this trader has done
+
+that without a huge amount of volatility which we can see just by kind of eyeballing the chart here
+
+the worst period that this trade has had looks like it was from around July 2020 to October 2020
+
+where we can see the value of the index fell from about 145 to 125 in those three months which isn't particularly
+
+bad at all and overall the portfolio does look as if it's been well managed on the performance
+
+or based on the performance that we see here.
+
+The final chart that I've got here is one of realized profit and loss.
+
+And up to this point with the portfolio value and portfolio index charts, they've both been measured.
+
+They both measure portfolio performance inclusive of unrealized and realized profit and loss, which is the right way to judge your trading statistics in terms of performance metrics.
+
+your trading statistics in terms of performance metrics however that being said it is also very useful to keep track of realized profit and loss on its
+
+own purely because that is the sort of figure that represents the profit and
+
+loss that has actually been closed out and recognized into the account and you
+
+can see here that in terms of realized profit and loss, this trade has managed the
+
+account very well and on a net basis there has been an $80,000 gain in the account net
+
+gain over the period and not much really in the way of drawdowns either.
+
+Okay guys, that brings me to the end of the explanation and analysis part of the video.
+
+Hopefully you guys get a good idea of how you're going to be able to use this spreadsheet
+
+to analyse your own trading data and also that you understand all the various components
+
+in it so far.
+
+As I said in the next video I'm going to be expanding on this stuff with more stats that
+
+allow you to dive even deeper into analyzing your performance.
+
+So what we're going to move on to now is looking at how you can actually build this spreadsheet
+
+yourselves and this is going to be a great exercise for you guys. It will make sure that you
+
+will understand the sort of details of how the spreadsheet works and all the formulas and
+
+calculations involved. Now at the end of the next video I will provide you with the spreadsheet
+
+that acts as a kind of template like I mentioned earlier and you'll be able to fill that in and it
+
+will save you a lot of time but I do suggest you learn how to build all of this yourselves first
+
+otherwise you might get confused with some of the numbers and also by doing by understanding all of
+
+this and how it's built you'll be able to customize and edit
+
+and troubleshoot the spreadsheet down the line as necessary. Okay let's look at this worksheet file
+
+now and then go through the building of the spreadsheet we just looked at. In each of these
+
+sheets all the data and analysis calculations have been removed and all I have kept is the borders, the colour
+
+formatting and like the table headers and things like that because you know I'm sure you guys know
+
+by now how to create those aspects very easily. So let's start in the portfolio monitor tab and fill
+
+in one position in row four so that I can show you how to build the sheet yourselves.
+
+Throughout this section I'm just going to use the entries we had in the portfolio that we looked at
+
+previously but as we go through you can imagine it as if this was your own portfolio that you're
+
+filling in. So the first position we're going to enter here is a long overstock position.
+
+The ticker for that stock is OSTK and the company name is Overstock.com.
+
+In the next column, we enter the trade entry date.
+
+So in this case, it's just the 3rd of November 2021.
+
+The position is a long position and the number of shares we hold is 220.
+
+Next up, we have the weighted entry price. Now the weighted entry price
+
+is basically the share weighted average price of the position. So for example let's say you bought
+
+150 shares of overstock for $108 and 70 shares for $97.94. The weighted average price which I'll calculate down here quickly for you guys is as follows.
+
+It'll be 108 multiplied by the share weighting which is 150 shares divided by 220 shares because that's
+
+the total number of shares you've bought for this trade plus $97.94 multiplied by the share weighting at that price which is 70 shares out of the 220 total.
+
+As you can see here the weighted average share price then becomes $104.80 and I'm going to enter
+
+that into cell g4 here. Now realistically you might not need to actually calculate that yourselves for every
+
+single position that you've traded multiple legs in. It is something usually that is easily
+
+attainable through your brokerage platform so just look out for it as well. It might not necessarily
+
+say weighted average entry price it might just be a single number that represents the cost
+
+of the position as a whole and usually you can kind of expand the view that you have when you see
+
+that those trades and you can kind of see all the contributing legs to that single number
+
+and so that will kind of make it clear that it's the average entry price. Next up we have the current price. Now that's fairly clear I hope.
+
+You can get the current price for the stock or any stock really from many different sources.
+
+One thing to note here is that whenever you update this portfolio monitor you need to make
+
+sure that you update the positions in the portfolio in their entirety and log the date
+
+that you've updated in cell C1 as a reference point.
+
+That's going to make sure that you have a really clear picture of the status of the portfolio monitor and it will prevent any sort of confusion going forward.
+
+So the current share price for overstock on the 21st of November 2021 was $107.93.
+
+was $107.93. Okay, so now we've filled out what I call the user entry cells, so the white cells.
+
+We can move on to creating the formulas required to calculate the gross and net exposures,
+
+as well as the percentage and dollar profit and
+
+loss columns. So starting with column I, the gross exposure, in cell I4 I'm going to type the formula
+
+to calculate the gross exposure for this overstock position which is simply the current price of the
+
+stock multiplied by the shares held. So equals cell H4 multiplied by cell F4. Moving on to net exposure now in cell J4 the formula is going to be the gross
+
+exposure multiplied by 1 for longs or -1 for shorts and we can formulate this
+
+equation using an if logic statement as follows: equals if that's the excel function we're using open brackets cell e4 equals in quotation marks in quotation marks long comma i4 cell i4 comma minus cell i4 close brackets.
+
+formula is saying in the first parameter of the if function
+
+is that the value in column E is that if the value in column E is equal to a text string that says long
+
+then the net exposure is equal to the gross exposure defined by the second parameter or if not then it's equal to minus the gross exposure, which is defined by the third parameter.
+
+Alright, so let's look at column K now, the percentage profit and loss.
+
+This is simply a returns formula, but with a little twist.
+
+The formula needs to be changed slightly based on whether the position is a long or short again.
+
+So, for long positions, the return will be equal to the current
+
+price minus the weighted entry price divided by the weighted entry price. And for short positions
+
+the return will just be the negative of the above equation. So we can solve this easily again with
+
+another if function. So in cell k4 I'm going to type the formula that you need which is equals if open brackets
+
+cell e4 equals in quotation marks long comma in brackets h4 minus g4 closed
+
+brackets divided by g4 and then in the next parameter so after another comma
+
+minus that same equation so cell h4 minus G4 divided by G4.
+
+And then close the brackets for that entire function.
+
+So if we take a look at this formula, basically the if statement logic is the same as we used for net exposure.
+
+It's saying if the position is along defined by the text string typed into cell E4,
+
+then the returns formula is calculated as whatever is put in the second parameter so h4
+
+minus g4 divided by g4 and if the position is not along then the returns
+
+formula is defined as what we see in the third parameter so minus h4
+
+that formula we just talked about and as a reminder each parameter in an excel function
+
+is separated by commas and you can see here how the function that you're using works by looking
+
+at the box that pops up beneath the formula as you're typing in a function so that's just a
+
+reminder to you guys hopefully that should be um kind of familiar territory for you all because we've discussed it before in previous videos.
+
+By the way, guys, I am deliberately not spending a huge amount of time explaining the Excel stuff here
+
+because almost everything that we're doing in this sheet is just utilizing skills that I have taught
+
+in previous videos in the series. Okay, the last calculation column is our dollar profit and loss column and again if we use
+
+an if statement in a similar way to how we did in the last two equations then we'll be able to get
+
+to the right answer. So for longs the dollar profit and loss is the current price minus the entry price
+
+multiplied by the number of shares and for shorts it's the negative
+
+of that equation. So the formula that I'm going to type into this cell L4 here is equals if
+
+open brackets E4 equals in quotation marks long comma brackets H4 minus G4 close brackets So that's it for our calculation columns in this sheet.
+
+All you need to do next is keep filling out all of the white cells to reflect your current portfolio and copy down the formulas in the blue cells as far down as is required.
+
+So let me just quickly jump to that stage now where the entire portfolio is filled in.
+
+Now we can just copy down the formulas that we worked out in columns I to L as far as necessary,
+
+which for this portfolio is to row 16, which in this instance I'm going to do by selecting
+
+cells I4 to L4 and right clicking on the little green box in the bottom of the selection
+
+and dragging downwards to row 16.
+
+Now when I let go here I have a few options about how I want to fill those formulas down
+
+and at this point I'm going to select fill without formatting so that all the borders and formatting
+
+of the cells we see is preserved which is just a nice little trick a handy little thing to know
+
+that you can do. So for every time your portfolio changes size, you just need to remember to alter how far the formula is run down in the blue columns to make sure that our aggregate formula works out or aggregate formulas work out properly and everything looks tidy. Now, speaking of our aggregate portfolio model.
+
+monitor formulas. Let's move on to those now and these are pretty simple. Basically
+
+for gross exposure, net exposure and dollar profit and loss we just need to
+
+create equations to sum all the relevant data for the individual positions
+
+together. So starting with the portfolio gross exposure I'm just going to
+
+calculate that in cell I24 by using the sum function. So the formula is just going to be
+
+equals sum open brackets i4 colon i23. So the cell range i4 to i23 close brackets.
+
+I think that formula is pretty self-explanatory but the reason why I suggest extending the array
+
+of cells that you're summing together right to the
+
+bottom of the gross exposure column, even though there's empty cells there at the moment, is so
+
+that the formula doesn't need to be updated as you add or remove assets in the portfolio. So you can
+
+see here the portfolio gross exposure is $339,000 as we had before which is just the sum of all the individual position gross exposures.
+
+We can extend that same logic to the net exposure column. In this case the formula for portfolio
+
+net exposure which I'll enter into cell J24 will be equal sum open brackets and then the cell array J4 to J23 close brackets. So our portfolio net
+
+exposure in dollar terms here we can see is about $93,000. If we want to calculate what the
+
+percentage what the exposure is as a percentage of the total gross exposure we can do that in the
+
+cell below and the formula would just be equals J24 divided by I24.
+
+And as you can see here, that yields a value of 27.51%,
+
+which tells us that the portfolio is tilted to have a long bias by 27% in dollar terms.
+
+As I explained in video 20, that isn't the full story from a risk perspective.
+
+And it's also important to consider the portfolio bias from a beta adjusted basis as well.
+
+The final aggregated cell in this sheet is the unrealized profit and loss cell, which is just sum of all the dollar profit and loss values we see in column L here.
+
+sum of all the dollar profit and loss values we see in column L here. So I'm going to type the formula for that in cell L24 and that is just going to be equal sum open brackets L4 to L23
+
+closed brackets and with that entered you can see the unrealized or open profit that we have running
+
+in the portfolio is around $20,000. So that's all there is to building out the portfolio monitor.
+
+I think that was all pretty straightforward for you guys or at least I hope so. Let's
+
+have a look at the realized profit and loss sheet now. And as you can see here, I've already
+
+entered the formatting for the various tables.
+
+and things that we're going to build. I'm going to start with showing you how to input the individual
+
+trade data in this table here on the left hand side and really this is going to work in a very
+
+similar way to the data entry we did on the previous sheet. So what you need to do in this
+
+table is every time you close out a position in full in your portfolio you just enter the relevant
+
+data dictated by the column headings that we've got here.
+
+So for the most part it's the same stuff as we looked at previously except this time you will also have a weighted exit price and an exit date for each trade and then the calculation columns
+
+are a bit different as well. So let's imagine we're entering our first closed trade in the
+
+table here which I'll make the same as the first entry in the previous portfolio that we looked at which was a
+
+short ternium position. So starting in cell A7 here the trade number is 1 since
+
+it's our first entry the ticker is TX and the company name is ternium. As I said
+
+previously this was a short position and the
+
+number of shares closed out was 445 with a weighted average entry price of $22.74 and
+
+a weighted exit price of $20.60. By the way, the weighted exit price is determined in much the same way as the weighted entry price.
+
+So if you're legging out of a position, meaning you close the position over sort of multiple trades or multiple legs,
+
+then you'll need to calculate the share weighted average exit price over those legs.
+
+Now, I'm not going to go through the methodology again because it's exactly the same as what we looked at before for weighted
+
+entry prices except this time obviously you're using exit prices or closing
+
+prices when you close the trade. Following on from prices we need to
+
+record the dates we entered and exited the position so the entry date can just
+
+be taken from the portfolio monitor since it should be recorded there when you
+
+guys do this yourselves. In this case the entry date we had was the 24th of January 2020 and the exit date can be
+
+recorded when you finally close out the entire position which for this trade was the 20th of
+
+February 2020. By the way when you come to do this yourselves you should find that all of this
+
+information is logged by your broker anyway.
+
+So you can just download it or copy it from their systems and each broker will be a little bit different.
+
+So you will have to kind of dig around a bit to try and find how they log all this stuff and actually make it available to you.
+
+But if in doubt, I'm sure you'll be able to just drop them an email and ask for some help to get hold of all this data.
+
+All right, so let's continue on to the blue calculation cells now.
+
+And the first one we need to fill in is the days in trade formula.
+
+So this formula is very easy. We're just going to take the exit date and subtract the entry date from
+
+it. So in cell J7 we just type equals cell I7 minus H7. Excel then calculates the number of calendar
+
+days between those dates and we have our answer here which is 27 days for this trade. Now note
+
+as I've said before that calendar days are different to trading days so when we talk about a one to
+
+three month trading time horizon in trading days we say 20 to 60 days but in calendar days
+
+that same horizon is equivalent to 30 to 90 days. So since we're dealing with calendar days here
+
+we can see that this trade was around a month long, 27 days. Next up we have the percentage profit
+
+and loss column. The formula here is going to depend on whether the position is a long or a short and it's just the same really as the one
+
+that we used in the portfolio monitor tab. So the formula here will be equals if
+
+D7 equals in quotation marks long comma in brackets G7 minus F7 divided by F7 comma and then minus that same formula.
+
+So minus in brackets G7 minus F7 divided by F7.
+
+So again, that's just saying if the position is identified as along by the text in cell D7,
+
+then the return should be the exit price minus the entry price divided by the entry price.
+
+And if not, then the return should be the exit price minus the entry price divided by the entry price and if not
+
+then the return should be the negative of that. Let's go on to dollar profit and loss now and again
+
+this is pretty much the same formula we used in the portfolio monitor sheet which is equals if
+
+open brackets d7 equals in quotation marks long again comma in brackets g7 minus f7 close brackets times by
+
+or multiplied by e7 then comma to move on to the next parameter minus that same function or formula
+
+i should say in brackets g7 minus f7 close brackets multiplied by e7 close brackets for the
+
+whole thing again that is just saying the dollar profit or loss for a long
+
+position is the exit price minus the entry price multiplied by the number of
+
+shares and the negative of that for a short position the final calculation
+
+column we have in this table is the win score column this is a column we we haven't seen elsewhere in the spreadsheet, but basically it just acts as a flag that tells us whether each position was a winner or a loser.
+
+A winner being a position that makes dollar profit and a loser being one that makes a dollar loss.
+
+So again, we can use if statement logic here to kind of find a formula that works.
+
+logic here to kind of find a formula that works. Basically what we want is a formula that says if the value in column L is positive then we mark the win
+
+score column with a 1 and if not we mark it with a minus 1. So the formula I'm
+
+going to use here is equals if open brackets
+
+l7 is greater than zero that's our sort of if statement logic comma if that's true we want to
+
+mark it with a one so i just put a one here comma if it's false we mark it with a minus one so i just
+
+put a minus one here and then close brackets for that formula that's just saying like i said if the
+
+value in cell l7 is positive then the output should be 1, and if not, it should be -1.
+
+Okay, so as I did in the previous sheet, what I want to do now is skip ahead a bit and populate
+
+the entire table here with all the closed positions that we saw previously. And then
+
+I can show you guys how to create some of the summary statistics that are based on all
+
+of that closed position data.
+
+Alright, so all the closed positions are filled in now, and all that's required to finish off this table is to copy down the calculation formulas we just created to the end of the
+
+data. So to do that, I'm just going to select the calculation cells J7 to M7, and then double
+
+click the little green box in the bottom right of the selection
+
+so that the cells are copied all the way down.
+
+And as you can see here, that seems to have worked well.
+
+And as a side note,
+
+when you guys come to updating your own closed position table like this,
+
+all you need to do is drag down the formulas as I've done here
+
+for each new data entry that you input the rest of the sheet including all of
+
+the summary stats will then be automatically updated for each data entry
+
+and so no formulas actually need to be edited or revised another quick note here
+
+while I remember actually is you'll notice in this sheet that whenever
+
+I scroll down the view of the top six rows always stays fixed. That's deliberate
+
+so that we can make sure our summary stats and table headings are always
+
+visible. But let me quickly show you how you can actually do that just so you
+
+know. All you do is select the first cell that you do not want to be fixed. So in this case, cell A7.
+
+And then go to view on the ribbon, followed by freeze panes.
+
+Now, at the moment, you can see I have an option to unfreeze panes.
+
+So I'll need to do that first so you can see the difference I'm talking about.
+
+So as you can see here, now that I've unfrozen the panes the view of the top six rows does doesn't stay static
+
+And so if we're scrolling downwards through this data table
+
+We lose our ability to see the column headings that apply to each column of data and we can't see the summary stats we had at the top either
+
+Okay, so back to the top then and let's freeze those rows
+
+As I said you want to select the first cell that's not frozen or that you
+
+don't want frozen and that applies both on the vertical columns as well as the horizontal rows
+
+so in this case i'm selecting cell a7 because i don't want any columns
+
+frozen and i just want rows uh one to six frozen at the top of
+
+of the screen. After selecting that cell within the freeze panes drop down we can just select
+
+the first option which says freeze panes and when that's done you can see here that the
+
+rows have been frozen again. Okay great so that was a slight detour but I hope that was
+
+helpful to you guys. Next up let's build out the histogram table and chart to the right
+
+hand side here. Now this isn't going to be anything new to you guys because you've already actually dealt with distribution statistics several times before in the video series.
+
+As you can see, I've kept all the borders and titles and formatting the same as in the sheet that we looked at previously.
+
+And all I'm going to do here is basically remind you of the calculations that you need to run and the steps that you need to take.
+
+So firstly, remember in this distribution table we're looking at returns and in this case
+
+it's the returns of each trade in the table that we just populated.
+
+Now as a reminder what a distribution table or histogram table does is counts the number
+
+of data points that fall within certain ranges of values and those ranges are defined by
+
+intervals. So the first thing that we want to do here is create some intervals. the number of data points that fall within certain ranges of values and those ranges are defined by
+
+intervals. So the first thing that we want to do here is create some intervals. This requires a
+
+little bit of nuance as I've discussed in the video series before but basically you want to try and
+
+make sure your intervals are of an even size and incorporate the vast majority of data. So since
+
+this trader's closed positions range from a profit of about 90% to a loss of about 35%,
+
+then intervals that start and end somewhere near those values should be okay.
+
+And I think in the other spreadsheet, the intervals started at minus 40% and went up to 70%.
+
+So that's fine. We'll just use those again here.
+
+So in cell 09, I'm going to type the lowest returns interval we want, which is minus 40%.
+
+So in cell 09, I'm going to type the lowest returns interval we want, which is minus 40%. And in the cell below that, 010, I'll type minus 35%.
+
+So it's gone up by an interval of 5%.
+
+And next, it will be minus 30% in 011.
+
+And then from there, what I'm going to do is just copy this constant interval size down to the penultimate cell,
+
+cell 03, which gives us a maximum interval of 70%. Next up is the range column. Now this column is
+
+just there to make it clearer to the user as to the range of data that's actually being encapsulated
+
+between each interval and the associated count. So you guys will
+
+remember from previous videos that this is just a text formatted cell and we're
+
+just going to type some text that represents the range that we want to
+
+analyze in each row. So in cell P9 I'm just going to type less than minus 40%
+
+which is the lowest range of data we want to consider and in the cell below
+
+that the range we are going to look at is between minus 40 percent and minus 35 percent so the text um that i'm going to type in
+
+here is between minus 40 and minus 35 each of the subsequent ranges are five percent intervals and so
+
+the next one for example will be
+
+between minus 35% to minus 30% and so on. That applies all the way down the table
+
+until you get to the final range in cell P32 which will be greater than 70%. So
+
+I'm just going to fill all of those out quickly now and then we can move on to
+
+the next column in the table.
+
+Okay, so next up is the count.
+
+All we're going to do here is count the number of trades from all of our closed trades that have returns within these ranges that we've defined.
+
+So starting in cell Q9, the formula is going to be equals count if open brackets k7 to k 10,000 and I'm going to fix that
+
+reference using f4. So I'm going to put dollar signs around the column letters k and the row numbers 7
+
+and 10,000. Then in the next parameter I'm going to put in quotation marks a less than mathematical operator and join that with
+
+an ampersand to the cell reference 09 and then close brackets. Now if we take a look at the formula
+
+the reason why I've chosen an array that goes from cell k7 to k10,000 is so there's plenty of space
+
+to count new data entries and that is trades that will be closed
+
+in the future that's why i'm referencing referencing all the way down to row 10 000 there
+
+as a reminder as well those dollar signs that i've added in around the column letters and row numbers
+
+are just because we want to completely fix that array even if we copy this formula down we don't
+
+want those references to move and as well as, remember guys that the second parameter of the count function just
+
+specifies the criteria by which we're counting.
+
+So in this case, that's less than whatever value is in cell 09, which is minus 40% in
+
+this case.
+
+Okay, so as you can see here, there aren't any data points that meet that criterion since
+
+the value returned is zero. So let's move on to the next range now. So in the cell below I'm going to type the formula
+
+COUNTIFS. So that's plural. So equals COUNTIFS. Open brackets. K7 to K10,000 and that's going to
+
+be a fixed reference again. Comma. This time in quotation marks greater than or equal to
+
+joined with an ampersand to cell 09 so greater than or equal to the value we see in 09
+
+comma the same reference again k7 to k10 000 again fixed and another comma for our second criteria
+
+which is this time less than in quotation marks joined with the NAMSAN to the cell 010. So basically we're saying we want to count everything
+
+within the range of k7 to k10,000 here that's greater than or equal to the value
+
+we see in cell 09 but less than the value we see in 010.
+
+So, as I said, this formula is basically the same as before but with multiple criteria.
+
+And it's basically counting all the data points that satisfy both of those criteria that is greater than or equal to minus 40% that we see in 09 and less than minus 35% that we see in 010.
+
+You guys have seen all of this kind of stuff before so I'm not going to bother explaining that formula any further. All you need to do from here is copy that
+
+formula down to the penultimate row in the table and each formula will then
+
+count the number of occurrences that lie within those various ranges. Now we
+
+can't copy this formula down all the way to the bottom of the table because the
+
+final cell only needs to count subject to one criterion just
+
+like the first cell did. So in this case we want to count the number of trades that have returns of
+
+greater than 70%. So all I'm going to do here is copy the formula from cell Q9 and paste it into
+
+Q32 but edit it slightly. So we want to change the cell reference to point at the 70%
+
+interval and also we need to change the mathematical operator from a less than
+
+sign to a greater than sign. Onto the next column then, the frequency column. You
+
+guys will remember that this is just the count for each range divided by the
+
+total count, so the total number of trades in this case.
+
+Now, if you remember the way we did this before
+
+was basically dividing each range count cell
+
+by a cell that counted the entire number of data points
+
+in the data set that we're looking at.
+
+Well, in this case, we don't really have a total count cell.
+
+So what we can do is just divide each count range by the sum of all the count ranges,
+
+which is basically the same thing. So let me show you what I mean here. In cell R9 the formula would
+
+just be equals cell Q9 divided by sum open brackets Q9 to Q32 and that would be a fixed reference and then closing that bracket.
+
+So that takes the count the bottom range and divides it by the sum of all of the range counts
+
+that we have which is obviously equivalent to the total count. So you need to make sure that the sum
+
+array reference again is fixed in this case so that when we copy this formula down to the bottom of the table, which we can do here just by right clicking the little green box at the bottom right of the selected cell and dragging it down as far as necessary and then choosing to fill without formatting.
+
+So when we do that, the formula will actually stay fixed.
+
+The reference will stay fixed when we do that.
+
+stay fixed, the reference will stay fixed when we do that. So in our last column in the histogram table we have our cumulative frequency column. The formulas in this column just cumulatively
+
+add up all of the frequencies for each range starting at the lower end. So in cell S9 the
+
+formula is just equals R9 and then in the cell below that cell S10 the formula will be equals
+
+S9 plus R10 and in the same way as before we can fill the formula down to the bottom of the table
+
+using the right click drag method and choose to fill without formatting. Again the reason I'm doing
+
+that is because I don't want to disrupt the formatting in the table so the borders and things like that all stay the same. Okay so the histogram table is done now but before we move on
+
+to quickly creating a chart from that data I think it's useful to calculate just a couple of summary
+
+statistics based on the returns generated from our closed trades. So the first couple are just measures of centrality
+
+for our returns, and those measures are going to be
+
+the mean or the average and the median.
+
+So I'm gonna work those out in cells P35 and P36.
+
+So to calculate the mean of all our returns,
+
+we can just use the formula equals average,
+
+open brackets, then the cell range K7 to K10,000, and then close brackets.
+
+And then to calculate the median of our realized trade returns,
+
+the formula is basically the same.
+
+We just replace the average function with the median function.
+
+So equals median, open brackets, and then choose the cell array K7 to K10,000 in closed brackets.
+
+Beyond that, I also think it's quite useful to know the average positive and negative
+
+returns from our closed trades, since it gives us insight into the risk management of the
+
+trader, as I said previously.
+
+So in cell S35, to work out the average positive return, we can use the average if function so the formula will be
+
+equals average if open brackets and the first parameter is our cell range so k7 to k10,000
+
+then comma then in quotation marks greater than zero and that's just saying average all the values
+
+in that cell range k7 to k10,000 that subject to the criterion that it's positive, so greater than zero.
+
+In the cell below, cell S36, we can work out the average negative return in the same way
+
+if we just change the criteria slightly.
+
+So this time the formula will be equals average if, open brackets,
+
+the same cell range, so k7 to k10,000 and this time after the
+
+comma in the second parameter we're changing the criterion so this time it will be in quotation
+
+marks less than zero rather than greater than zero and we can close the brackets and enter the formula.
+
+All right guys we are almost there with this section now what we've got to do next is just create a chart from all of this data and I'm sure you guys
+
+understand this by now. But basically all I'm going to do here is create a chart
+
+inside this sort of blank area over here. So I'm gonna go to insert on the ribbon,
+
+followed by 2D column chart. From there I'm just moving and resetting.
+
+And then once that's done, to add data we just right click inside the chart and go to select data.
+
+Inside the next dialog box we click a series and then select cell R8 as our series name and R9 to R32 as series values. After doing that and pressing OK we can now sort
+
+out the labels running along our horizontal x-axis by clicking the edit labels button.
+
+Here we just select the text labels we created earlier running from cell P9 to P32 and that's
+
+basically all there is to it. One thing I do like to do though with these histogram charts to tidy things up is just to orientate the text labels on a
+
+slant. So to do that you can just select the text labels inside the chart
+
+area and go to home on the ribbon followed by the orientation drop-down and
+
+choose counterclockwise. Finally let's just rename the title to something
+
+slightly more descriptive rather than just frequency. So something like frequency distribution colon returns percent per trade.
+
+Okay, so that's all of the distribution of returns stuff done.
+
+The final section of this sheet is the summary statistics table at the top.
+
+So let's have a look at
+
+that now starting with the statistics on the left hand side here. We're just
+
+calculating the number of winning trades, losing trades and total trades
+
+down cells E2 to E4. So in these cells we're just going to be using the
+
+COUNTIF function again, counting the number of trades subject to certain criteria.
+
+So in cell E2 the formula is just going to be equals COUNTIF, open brackets, M colon M, which is the way we can select an entire column, comma, one, close brackets.
+
+And that's going to count all the values of one in column M.
+
+So that's just all of
+
+our winning trades in the same way for losing trades we can use the count if function again
+
+except this time with the criterion of minus one rather than plus one so the formula is equals
+
+count if open brackets m colon m comma minus one close brackets finally in cell e4 to count the total number of closed trades we can just use the formula
+
+=Count which counts all the number cells in column M.
+
+The next cells that we're going to calculate are cells g2 to g4 which sum up the dollar profits
+
+from winning trades and the dollar loss from losing trades and also the total or net dollar profit
+
+from or net dollar profit or loss i should say
+
+from all closed trades. So to add up the dollar profit from all winning trades the formula we'll
+
+use in cell G2 is =SUMIF and that formula just uses the sum function to add up all the values in
+
+column L subject to the criterion that the the values in column L, subject to the criterion that
+
+the associated values in column M are equal to 1, i.e. winning trades. And note that for this function
+
+the first parameter is the criteria range and the second is the criterion and the third is the array
+
+that you actually want to aggregate or sum up.
+
+For total$losses we do the same thing except we want to surround the formula with the absolute
+
+function.
+
+That's because although we're counting losses and those losses are obviously going to be
+
+negative values, in this cell we want to display our losses as a positive integer.
+
+So to do that we just take the same formula as we did before, edit the criteria and surround
+
+it with an absolute function.
+
+So the formula here is =AVS, that colon m, comma, minus one, comma, l, colon l, closed brackets, and closed brackets again.
+
+So that formula just adds up all of the losses in column l, subject to the criteria that a loss condition is met in column m, so a minus one score,
+
+and then applies the absolute function to make that integer positive rather than negative.
+
+And finally, the formula for the total dollar profit or loss in cell G4
+
+is just equal to the sum function again, open brackets, column L.
+
+So L colon L, close brackets.
+
+And that's just the total sum of all numerical values in column L.
+
+Next up is the win and loss percentage cells.
+
+These are very simple to calculate.
+
+The percentage of winning trades is just the number of winning trades shown in cell E2
+
+divided by the total number of trades shown in cell E4.
+
+And equally for percentage losses, we take the number of trades shown in cell E4 and equally for percentage losses we take the number of losing
+
+trades divided by the total number of trades and you can see here when I run both of those formulas
+
+in the appropriate cells we get 56% winners 44% losers. Finally then for this summary statistics
+
+box and for the realized P&L sheet let's's work out the R-score for this trader.
+
+The R-score is simply the dollar profit for winning trades divided by the dollar loss for
+
+losing trades. Now previously we discussed the R-score in previous videos
+
+in the context of setting stops and targets for
+
+kind of individual stocks for the most part. Here we're measuring the realized
+
+performance of our closed trades in the portfolio. So as I said the R score here
+
+is the dollar gain for all of our winning trades aggregated divided by the
+
+dollar loss for all of our losing trades aggregated. So as a formula that simply
+
+means dividing cell G2 by G3.
+
+And once that's done you can see here that it shows that this trader has an R score of
+
+1.8 as we saw earlier.
+
+Okay guys we're almost there for this video.
+
+I just want to show you how you would build this final sheet now which is the portfolio
+
+value sheet.
+
+As you can see again I've got the sheet formatted a little bit
+
+already which I trust you guys will be able to do on your own easily. It's just
+
+the sort of color formatting borders and titles that I've already talked about
+
+plenty of times before. So in this sheet I'm going to start in the bottom table
+
+here which is where you're going to record your portfolio data on a regular
+
+basis. And it's quite important here that you do choose a regular period that you can stick
+
+to.
+
+So I recommend doing this once a week since daily is probably not realistic in terms of
+
+upkeep and doing this on a monthly basis would take quite a while really to get enough data
+
+points for the statistics that you then calculate out of that data to become relevant.
+
+Okay, so let's imagine you're starting with a blank slate as we have here. You want to pick
+
+one day a week, probably on a weekend when markets are closed, to basically fill in your
+
+current realised and unrealised P&L in your portfolio. And that's going to happen in columns
+
+B and C. And obviously the date is going to go in column A. So the current unrealized P&L should be obtained from your portfolio monitor sheet in cell L24.
+
+Once it's already been fully refreshed and/or freshly updated, equally your realized P&L
+
+can be updated from the realized P&L sheet in cell G4. There is something I want you guys to note here which is
+
+that you'll want to keep reconciling this data with what you see on your brokerage platform to
+
+make sure things look like they are in line and correct with what you actually see there.
+
+That should be the kind of minimum requirement really. If the data isn't in line and you can't
+
+figure out why I suggest you just take the figures from your brokerage account since they're more likely to be correct.
+
+And in fact, that might be a better idea for this sheet anyway, since it will make sure that everything is accounted for properly,
+
+as you might have some other elements, for example, dividends or other income that isn't accounted for in these sheets that we've looked at.
+
+And that brings me to another point. This
+
+spreadsheet has been set up with the principle that it needs to be simple to use and able to
+
+convey the importance of tracking trader performance. It's not made to account for
+
+every little accounting detail. But that being said, it is fairly easy for you guys
+
+to customize and add any components that you might want to in order to make it suitable for your own
+
+needs. And you can kind of go to whatever degree you want to there in terms of trying to sort of
+
+maintain accuracy. Okay, moving on to column D, we have trading and platform costs. If you can get
+
+access to it easily enough, which you should be able to from your brokerage account, you'll want to keep a tab on your cumulative trading and platform costs.
+
+Now, for simplicity here, this wasn't actually filled in in the model account that we looked at previously.
+
+But this should be the sum of all your commissions, financing costs, platform subscriptions and so on on a cumulative basis each week.
+
+subscriptions and so on on a cumulative basis each week. Columns E and F are fairly simple. It's just taking note of your account deposits or withdrawals each week and that isn't cumulative. So if you
+
+don't make a deposit or withdrawal in a certain week you should just leave that blank or with a
+
+zero and obviously that's going to be true most of the time. All right what I'm going to do now is
+
+enter all the data that we had previously into this sheet
+
+for the model portfolio and then we can have another look at it. So here we go. Let's scroll
+
+down to the bottom sheet, bottom of the sheet now and we can see here that the last entry was on
+
+Sunday the 14th of November 2021. So with that in mind, what we can do now is update this table with
+
+the latest weekly data that we've got. And if we take a look at the portfolio monitor
+
+tab, you'll notice that this data is updated and accurate as of Sunday, the 21st of November,
+
+which is obviously the week following the final data that we have entered at the moment
+
+into this portfolio value sheet. That means we can update the portfolio value sheet with
+
+the new unrealized PNL
+
+number which we'll do just now and all I'm going to do here is basically copy cell L24 in the
+
+portfolio monitor tab with ctrl c and paste it as a value below the last unrealized PNL value we have
+
+in the portfolio value sheet. Note that I said we want to paste this number as a value which means we
+
+right click on the cell that we want to paste into and then select the one two three clipboard from
+
+paste options section of that menu. We do that because we don't want to copy across the formula
+
+from the cell that we just copied. We only really want to grab the output. Now obviously at this
+
+stage we ought to be putting
+
+the most recent date into column A as well so let's do that now. That's just the 21st of November 2021.
+
+Okay next let's grab the most recent realized P&L data and by the way it goes without saying here
+
+that I'm assuming that the unrealized and realized Pnl data that we have in these sheets is correct and in line with the brokerage account for this trader
+
+which makes it obviously viable to use so moving over to the realized pnl sheet
+
+we're just going to grab the realized pnl number we need from certain
+
+G4 and paste it as a value into cell D117 in the portfolio value sheet. And as I said previously,
+
+we're not considering a trading or any trading or platform costs in this model example. But of course
+
+for you guys, you would need to update that if you can when you enter your own values. So for the
+
+last week of data, we're assuming that there's no deposits or withdrawals either.
+
+Okay, so let's move on to the blue calculation columns now.
+
+Starting with column G, which is our net deposits.
+
+This is just the deposits column minus the withdrawal column for each row.
+
+So in cell G19, the formula would be equals E19 minus F19.
+
+From there, we can just copy that formula down to the final row of data that we have.
+
+The cumulative deposit column will start with a formula in cell H19, which is equal to the net deposit.
+
+So H19 equals G19 in this case.
+
+However, to make this column cumulative, the next cell needs a slightly different formula.
+
+So cell H20 will be equal to cell H19 plus G20.
+
+And that formula can then be copied down to our final row.
+
+With the cumulative deposit column complete, we're now ready to calculate portfolio value in column I so this is just going to be our unrealized P&L plus
+
+our realized P&L minus our cumulative trading costs and plus our cumulative
+
+deposits therefore the formula in column I starting in cell I 19 will be B19 plus C19 minus D19 plus H19. Okay, in the next column we calculate portfolio returns
+
+from our portfolio value figures. The formula this time starts in J20 and is as follows. That is
+
+equals in brackets I20 minus G20 close brackets divided by I19 minus 1 and this is similar to other returns
+
+formulas you would have seen but with a key difference and that is that we want to make sure
+
+the returns are adjusted for any deposits or withdrawals made as I discussed earlier in the
+
+video. For that reason we need to make sure that the net deposit column is subtracted from the portfolio value column for each current period when calculating returns.
+
+So as always, we can copy those two formulas that we just made to the end of the data set once they're both filled in.
+
+And moving on to the final column, we have our portfolio index.
+
+Now, it's common practice in the finance industry to start portfolio
+
+indices at a value of 100 so that's what we're going to do here in cell K 19 I'm
+
+going to abide by that practice and enter a value of 100 now in the cells
+
+below that we can calculate how the index moves based on the return
+
+we computed in column J. So in cell K20 the formula will be equals K19 multiplied by in brackets
+
+1 plus J20 and with that formula it can be copied down to the bottom of the data set and then we
+
+have our entire index. Now when you guys update your own spreadsheets, you'll need to remember to copy down the blue cell formulas to each new row as you add new data into the adjacent white columns.
+
+But that's basically all there is to updating this table. It's generally very simple.
+
+The issue lies in trying to make sure you maintain accurate records.
+
+And like I said before, that can be helped by finding the right data from your broker.
+
+Like I said before, that can be helped by finding the right data from your broker.
+
+Okay, let's move on to creating a few charts based on the data table that we've just looked at.
+
+The first one we want to make is the portfolio value chart.
+
+And to create this one, all I'm going to do is select cell F2 and then go to insert on the ribbon, followed by insert 2D line chart.
+
+on the ribbon followed by insert 2d line chart we can then reposition and resize the blank chart area as required before right clicking within it and going to select data to choose the data that
+
+we want to enter into that chart and the core series that we want to add is the portfolio value
+
+series that we see in column i so to add that i'm just going to click the add button
+
+on the left hand side of this dialog box and then in the series name box i'm going to reference cells
+
+i18 and in the series values box i'm going to select all of our data in column i so from cells
+
+i19 to i117.
+
+However, before pressing OK here, I actually want to edit that reference so that the final
+
+cell is actually cell i10,000.
+
+And that just means that whenever we update the table with new data, the chart will automatically
+
+update as well and we don't have to constantly worry about updating chart references every
+
+week.
+
+Now after pressing OK,
+
+we need to choose the horizontal axis labels to go with those portfolio values. So that's just going
+
+to be our dates in column A. So here I'm just going to select Edit Horizontal Axis Labels and choose
+
+a range that's the same size that I just referred to for the portfolio value cells. So from cell A19 to A10,000.
+
+Okay this is looking pretty good but one thing that you will probably want to add to this chart
+
+is another line that conveys the cumulative deposit running in the account because that
+
+will explain spikes and dips in the portfolio value that otherwise might be misleading. So to add that data, I'm just going to
+
+right click in the chart area again and add another series.
+
+And this time the series name will be cell H18, so our
+
+cumulative deposit title. And the series values will
+
+range from cell H19 to H10,000. Once we press enter a couple of times and close those dialog
+
+boxes you can see the orange cumulative deposit line plotted on the chart there. All that's
+
+left is to add a legend to the chart and any formatting changes you guys might want to make
+
+as well. I'm going to leave those formatting preferences to you guys but I will just quickly remind you how to add a legend. All we need to do is select the
+
+chart and go to chart design on the ribbon followed by add chart element and
+
+then legend and I'm going to place the legend here at the top of the chart.
+
+Alright that's the first chart done. We need a couple more now, one to plot the portfolio index value and one to plot the realized P&L.
+
+I'm going to start with the portfolio index chart first and I'll just go through these really quickly because we're basically just doing the same things again a couple times more.
+
+Okay, so I'm just selecting cell K2 here and then inserting another 2d line chart and then resizing and positioning it
+
+appropriately following that we need to add a data series and that data series is going to be our
+
+portfolio index in column k the range of values that we want to reference is going to go from
+
+k19 to k10 000 and again that's because we want to make this sheet
+
+robust and the charts to update as we enter new data. The horizontal axis labels should
+
+reference a range of the same length and that will be our dates of course, just like last
+
+time. And that's all we need to do for that one really. The final chart will be another
+
+line chart to plot realized profit and loss.
+
+So this time I'm going to select Q2 and insert a 2D line chart. Again I'm just resizing and
+
+positioning this so it's roughly the same size and in line with the others. Following
+
+that I'm going to add a data series where the series name will be cell C18 and the series values ranging from C19 to C10,000.
+
+And again, the horizontal labels
+
+will just be the associated weekly dates
+
+for those values of realized profit and loss.
+
+So that's cells A19 to A10,000.
+
+So that's the charts done.
+
+And we're at the final stage now.
+
+All we need to do is work through some basic summary statistics for this sheet.
+
+And here we're going to calculate the mean return on a weekly and annualized basis.
+
+We're going to work out the total return to date, the standard deviation and the downside deviation.
+
+And both of those will be on a weekly and annualized basis as well.
+
+those will be on a weekly and annualized basis as well. We'll start with the weekly mean return for this portfolio.
+
+And all we need to do here is take the average of all the numerical values we see in column J,
+
+since all of our data entries are weekly.
+
+Note that if you were to use a different frequency when you update your data,
+
+we are about to calculate would apply to whatever that frequency is as long as
+
+it's consistent. So the formula I'm going to use for this is just equals average
+
+j colon j so average of the data that we see in column j and in the adjacent cell
+
+we can annualize that figure with the following formula, which is equals open brackets twice, 1 plus C3, so our weekly return,
+
+close one bracket to the power of 52, close another bracket, minus 1.
+
+The reason why we use a power of 52 here is because there are 52 weeks in a year,
+
+so if you're using different periodic
+
+frequencies, you would have to adapt this formula as well. The total return of the portfolio is the
+
+ending portfolio index value divided by the beginning portfolio index value minus one. And
+
+the reason why we use the portfolio index to calculate the total return is to make sure that we're adjusting appropriately for deposits and
+
+withdrawals. Now in order to make the formula for this equation robust so that when we update the
+
+sheet with new data entries we don't have to edit the formula we need to do as follows. So
+
+the formula needs to be equals VLOOKUP, open brackets, large, open brackets, a colon dollar k comma 11 comma
+
+false close brackets divided by k19 as a fixed reference minus one. So what this formula does is
+
+basically look up the largest value in column a which will be whatever the most recent date is. It then finds the associated portfolio index value
+
+to that date, to the most recent date, and divides
+
+that by the starting value of the index in
+
+cell K19, and then finally subtracts 1. So that is basically just
+
+a simple returns formula wrapped up in some Excel functions
+
+that make it able to auto update when
+
+you enter new data into the table. By the way you'll notice at this stage that the value we have here
+
+for the total return and mean return is slightly different to what we had previously in the video
+
+and that's just because we've made one more entry into our portfolio value sheet here and that has affected things slightly so we'll see the same thing applying to the standard deviation
+
+measures in a moment as well. So let's look at the weekly standard deviation
+
+now. The formula to use here is E
+
+equals stdev.p and then open brackets column j so j column j close brackets and then in the adjacent
+
+cell to annualize that figure we need to multiply the one that we just calculated by the square root
+
+of 52. And again we use the value of 52 here because that's the number of weeks in a year and
+
+we're looking at weekly data. You'll need to adjust these formulas if you're updating your data on a different frequency.
+
+But I need to stress if you are updating your data on a different frequency,
+
+just do make sure that the intervals are well defined.
+
+So daily, weekly, monthly and so on,
+
+because it's going to kind of affect everything if you don't do that on a consistent basis.
+
+Finally, we have the downside deviation, which is in theory very similar to working out the standard deviation,
+
+only that it considers negative data points.
+
+The practicality in terms of the Excel formula required, though, is a little bit tricky.
+
+So again, you'll need to bear with me for this formula but the one we're going to use for this is equals sqrt so that sounds
+
+for the square root in brackets sum sq so that's the sum of squares open brackets if open brackets again column j that's j colon j is less than zero comma column j again j colon j
+
+close brackets twice divided by the count in column j so count open brackets j colon j and then finally
+
+close two brackets now that formula was quite a mouthful but what this formula does is essentially it works out the standard deviation of portfolio returns once all the positive returns to kind of deconstruct it and backward engineer it, you can by all means with the help of Google. I'm sure you
+
+guys will be able to manage and figure out what I'm actually doing here. But basically, you don't
+
+really need to do that. You only need to know what it does roughly, which is, as I just said,
+
+it works out the sort of standard deviation of just all the returns once the positive returns have
+
+been converted to zero values and the negative values are left as they are. Just be aware though
+
+that this formula is what is called an array formula and therefore when you input an array
+
+formula into Excel you actually have to input it with ctrl shift and enter on the keyboard
+
+not just enter. So that's just an Excel quirk I'm afraid for this kind of formula.
+
+Don't worry about it too much, just follow the instructions and it will all be okay.
+
+So to annualize that figure, you just do exactly the same as we did with the standard deviation in the cell above.
+
+annual standard deviation in the cell above. So basically we're multiplying c9 downside
+
+deviation by the square root of 52 again and that gives us our annual figure.
+
+Okay guys, you've done it. We're at the end of the video now and it was another long one
+
+so good work on getting through it. In terms of the most important things that you'll
+
+want to take away here, it's most of the stuff that we covered in the first half of the video, which is all the analysis and explanation of the various components in the spreadsheet.
+
+want to be looking out for in your own trading statistics and also how to use this spreadsheet to do a deep dive into your portfolio performance and identify various strengths and weaknesses
+
+that you may have in your trading. That's going to be one of the fastest ways that you can actually
+
+improve as a trader because you aren't going to get everything right straight away, that's for sure,
+
+and it all takes practice and repetition as well as plenty
+
+of kind of reflection and continuous improvement in what you're doing. The stuff that we looked at here
+
+helps massively with that. Just remember though that you do need to be a little bit careful when
+
+you're updating your data. You want it to match what you see in your brokerage account as much as
+
+possible especially in the portfolio value sheet. So try to reconcile that as much as possible especially in the portfolio value sheet so try to reconcile
+
+that as much as you can i forgot to mention as well obviously this spreadsheet is set up to deal with
+
+trading us stocks but if you are trading stocks denominated in other currencies or your home
+
+currency is different to usd then you may want to set up some currency conversion columns to help with your analysis.
+
+So, for example, your profit and loss columns that you use to generate performance stats from should all be based in a single currency.
+
+Otherwise, it becomes meaningless. Just bear that in mind if that's something that is applicable to you.
+
+Another thing to mention as well is that if all of this stuff
+
+seems like a bit much then a lot of it can effectively be outsourced back to us by becoming
+
+an ITPM trader. We keep professional standard audited performance data on all of our ITPM
+
+traders and so that's always something you guys can consider as well. Okay, so in the next video,
+
+we're going to look at some more advanced statistics
+
+that you can take a look at to analyze your performance.
+
+And I'll be doing a quick walkthrough of a template file
+
+that you can use to speed all of this stuff up a little bit.
+
+All right, guys, good work again,
+
+and I'll see you in the next video.
+
+Thank you.

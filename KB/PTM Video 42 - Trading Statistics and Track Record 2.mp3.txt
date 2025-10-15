@@ -1,0 +1,1123 @@
+Hi guys and welcome to video 42 which is the second and final performance statistics video in the series.
+
+Here we're going to look at some more advanced statistics for you guys to have a look at sort of on top of the stuff that I showed you in the last video.
+
+And hopefully all this stuff is going to help you analyse your own trading performance in even more detail.
+
+And in terms of the advanced statistics we're
+
+actually going to look at here, those are going to be the Kelly criterion, the Sharpe ratio,
+
+the Sortino ratio, and the Kalmar ratio. Now, in a slight deviation from the format of the
+
+previous video, I'm actually going to kick things off here with a bit of a presentation to talk
+
+through the theory and calculation of those statistics.
+
+Then we're going to head back over to Excel to look at some of those metrics through the lens of the
+
+model portfolio that we saw in the previous video. And after that I'll show you how to calculate and
+
+build the new sections of the spreadsheet that we're going to be adding on to the previous version.
+
+And then finally I'm going to mention a few things about the
+
+template file which you guys will be able to use and have available in the download section
+
+of this video. Now I'm going to start here with the Kelly criterion. So this metric was
+
+originally developed by a guy called John Kelly in the 1950s and it was created as a method to help size bets in various gambling games
+
+in order to kind of maximize the expected geometric growth rate of a player's wealth.
+
+And it's often still used today in those games and it's also been pulled across into the world of
+
+trading and investing. But that being said, despite its kind of popularity in these circles,
+
+But that being said, despite its kind of popularity in these circles, the metric is itself quite poorly understood.
+
+So to help try and explain that, to start with, let's consider the problem of sizing our bets in a simple gambling game where if we win the bet, we double up.
+
+And if we lose, we lose the entirety of the bet so imagine that before playing the game we also know there's a 52.5 chance of winning each bet and therefore a 47.5 chance of losing each bet and
+
+let's say we're starting with a hundred dollars the question becomes what percentage of our stack or bankroll, that is the money that we have available to play the game, what percentage of our stack should we bet in each round of play?
+
+Well, to help us answer that question, here I've run a simulation with a thousand rounds of betting under the conditions that I mentioned.
+
+And in 52.5% of the rounds we win our bet, and in 47.5% of them we lose.
+
+Now, given those outcomes, I've modelled how various bet sizes perform in terms of building our stack,
+
+or generating wealth if you prefer that terminology.
+
+And the bet sizes are defined by percentage, the percentage of our bankroll.
+
+And as you can see, I've got six different bet size models running here where I'm simulating betting either 1, 2, 5, 10, 15 or 20 percent of our stack.
+
+Now, you might have thought here that if we have a 5% edge as I've defined in this game,
+
+that is the difference between our winning and losing probabilities, then surely the
+
+higher the bet size the better.
+
+Well, that doesn't look to be the case here because in the chart you can see that the 10,
+
+15 and 20% bet sizes perform worst over this simulation.
+
+Now at this stage you might be saying okay fine, but that's just one simulation. Now at this stage you might be saying okay fine but that's just one simulation. If you run more where the round wins and losses occur in different orders for example then the outcome will be different.
+
+Well that's also incorrect and I can tell you that it doesn't matter what the order of wins and losses are in this situation. You can have all the 52.5% of wins first or all of them last.
+
+The end point for every model is the same over a thousand rounds of betting as long as 52.5%
+
+of rounds are won. So to briefly show you that, here what I've done is plotted a chart of all
+
+the wins coming first. And as you can can see all the bet sizes in this scenario
+
+result in wealth accumulations that go off the chart off the scale on the left hand side but that
+
+being said the end result after a thousand bets where 52.5 percent of them are winners is exactly
+
+the same as in the initial simulation and again in next slide, I've plotted all of the losses
+
+this time happening first. And all bet sizes result in wealth almost going to zero in this case. But
+
+again, I assure you that the end result after a thousand bets is exactly the same as the previous
+
+two charts, so long as we have 52.5% of those bets
+
+being winning bets. So is it the other way around? Perhaps the smallest bet sizes
+
+are the best performers. Well you can see here if we go back to our original
+
+chart that that also isn't true. The best bet size model we have here is 5%, then it's 2%, then it's 1%, then 10%, 15%, and 20%.
+
+So what's the conclusion that we have here? Well, based on these simulations alone, it does seem to
+
+be that if we have known winning and losing probabilities, as well as known amounts gained and lost in each win and loss,
+
+then it looks like there is an optimal betting size.
+
+The Kelly criterion is going to help us figure out what that size is given certain conditions.
+
+I think it's important that you guys understand why increasing your bet size or leverage beyond a certain point,
+
+even in guaranteed positive conditions like our 52% or 52.5%, I should say, winning percentage can actually result in losing you money.
+
+So to figure this out, let's look at a different example here where we're going to shift the game that we're playing to trading.
+
+And to simplify things, we're going to assume that we only make two trades in this game.
+
+In one trade, we generate a 30% profit, and in the other one, we lose 10%.
+
+And you'll notice that given the knowledge you've picked up from the previous videos,
+
+that would give us an R-score of 3, or at least at face value, it would.
+
+that would give us an R-score of 3 or at least at face value it would.
+
+Now clearly in this scenario we've got a win percentage of 50% and a loss percentage of 50% since we make two trades and there's one win and one loss.
+
+Okay so what I've done here is calculate the percentage profit on our portfolio
+
+given this scenario under various bet sizes again. So if we
+
+take the first line in this table for example we're saying that the bet size is equal to a leverage
+
+factor of 0.2 or 20%. Our initial capital is $100. Our gain from the winning trade will be equal to
+
+6% of the portfolio value, given that the bet
+
+size is 20% and our win return is 30%. So that is 30% multiplied by 20%, which is 6%.
+
+Our loss from the losing trade will be equal to minus 2%. And again, that is our minus 10%
+
+loss return this time multiplied by our leverage factor of 0.2 or 20%. And if we start
+
+with $100 and we compound those returns together, then we obtain our final capital, which is in the
+
+first line equal to $103.88. And that yields us a profit of 3.88%. Now, the rows below that first entry show what the profit would be over the two trades
+
+as the bet size keeps increasing.
+
+Now, as an aside, when you see the bet size going over a value of 1, meaning 100%,
+
+that just reflects the application of leverage here.
+
+So what is interesting here is firstly at some level of bet
+
+size the profit over the two trades peaks and secondly if the bet size is increased enough
+
+the profit that we did see previously actually becomes a loss. How can this be? Well what this
+
+comes down to in the end is actually pretty basic arithmetic.
+
+First of all, we need to bear in mind that as the bet size increases, the percentage win
+
+and loss in each trade increases linearly.
+
+So, for 2x leverage, for example, the win return becomes 60%.
+
+and the loss return becomes minus 20%.
+
+Secondly, we need to understand the relationship between a percentage win and a percentage loss on final wealth is not linear.
+
+To illustrate that simply, here's a table that shows what percentage loss has an equivalent and opposite effect to capital as a certain gain value.
+
+capital as a certain gain value. So for example a 1% gain here and a 0.99% loss results in capital being unchanged. A a thousand percent gain and a 90.91%
+
+loss results in capital being unchanged over the two trades. And this is what I mean when I say the
+
+relationship between positive and negative returns on final wealth is non-linear. And that is exactly
+
+what we're seeing in this two trade example as more and more leverage
+
+is applied. So I hope that makes sense to you guys and if not just run the numbers yourself and I'm
+
+sure you'll see what I'm talking about. Okay so in this next slide we're going back to the previous
+
+table and this time I've plotted a chart based on that data. The blue line in the chart shows the
+
+profit or loss for various bet sizes or leverage factors
+
+given the two trade scenario that I've been talking about. And by the way, when I keep using
+
+the phrases bet size and leverage factors interchangeably, that's because they are. A bet
+
+size of 20% of our total capital is equal to a leverage factor of 20% as well or 0.2 in decimal format. So anyway in this chart the line
+
+represents the profit or loss at each size of bet as I said and this line is what's known as the
+
+Kelly curve and the apex of that curve is where profit is maximized and the bet size or leverage
+
+factor at that point is known as the Kelly criterion, or at least it's the output of our Kelly criterion formula.
+
+So speaking of the Kelly formula, here it is. It is K equals P over A minus Q over B.
+
+Now, obviously, that doesn't mean much when it's just letters, but K is the Kelly or the position size as a percentage of total capital available.
+
+P is the probability of a win. Q is the probability of a loss.
+
+B is the percentage gain under a win condition and A is the percentage loss under a loss condition.
+
+So that's basically saying the optimal position size, Kelly, is equal to the probability of a win divided by the loss
+
+percentage under a loss condition minus the probability of a loss divided by the gain percentage
+
+under a win condition.
+
+Now you'll be pleased to know I'm not going to go into the math of deriving this equation
+
+equation in this presentation, but actually if you were to look at it yourselves it isn't
+
+too difficult. If you remember back to your high school maths and you can remember how to find the
+
+derivative or the slope of a function, then that's all that's actually required here. So if you find
+
+the equation for the slope of the Kelly curve and you set that equal to zero, then you would obtain
+
+the above Kelly criterion. Why zero? Because when the gradient
+
+or the slope of that Kelly curve that we saw previously is zero we know that we're at the apex
+
+and thus profit is maximized. Now back to the formula. For you guys that have used or seen the
+
+Kelly criterion before you might think that this formula doesn't look quite right. There is another formula that has a more specific use case which you might be thinking of, which is
+
+this one here, which is k equals p minus q over x, where k is the position size as a percent of the
+
+total capital available, that's our Kelly. p is the probability of a win, Q is the probability of a loss, so that's 1 minus P.
+
+And X is the ratio between the gain percentage under a win and the loss percentage or loss return under a loss.
+
+So this is a specific use case Kelly criterion as opposed to the general formula, which I showed previously.
+
+And basically, this formula assumes that the loss percentage under a loss condition is equal to 100%,
+
+meaning for every losing trade or losing bet, the full amount staked is lost. It also assumes
+
+that the gain percentage is some multiple of that loss, and so the ratio or a ratio of one or more
+
+is expected. That's appropriate for many gambling games, but at least in theory, it doesn't apply
+
+well to trading, because it's obviously very rare that the full stake of the position is lost.
+
+of 333.3% or 3.33 in decimal format. Now that actually implies that Kelly is suggesting our position sizing is over a hundred percent of our available
+
+capital so it basically wants us to take leverage given the inputs that we've
+
+got here. Now for the first trade in the two trade scenario, that would mean borrowing $233 to give us a total of $333 available for the trade.
+
+That seems extreme, but you have to remember that the Kelly criterion works on the principle of maximizing profit given known inputs, meaning the amount won and lost on every trade is known and guaranteed in percentage terms,
+
+and the percentage of wins and losses are also known and guaranteed as well.
+
+So let's address these problems in turn. Firstly, in reality, in trading
+
+our inputs are never known. We don't know for sure what percentage of trades we're going to win or
+
+lose going forward and we don't know what our returns will be either. What we do know is what
+
+these figures were in the past and that can give us a guide for the future albeit you know with a lot
+
+of variability. If you were to run simulations using the empirical returns distribution from your
+
+own portfolios for example and then
+
+calculate Kelly criterion values from those simulations you would see just how much variation
+
+there would be in the Kelly recommendation of position sizing. Moreover if you were to use the
+
+empirical Kelly criterion value calculated from your portfolio returns in order to size trades in
+
+those simulations, you would most likely find that there is an unacceptable number of those simulations
+
+going bust. Quite a number of them most likely would. The thing to understand about the Kelly
+
+criterion is that its aim is to maximise profits. It has absolutely no consideration of risk.
+
+If you look at a Kelly curve, as the position size increases, the slope of the profit or returns
+
+changes. And when you're at the apex, there is no change in profit for an incremental increase in position size. So what does that mean?
+
+Well, we know that position sizing or leverage, put another way, increases risk linearly of the
+
+asset that you're trading. So that means when the gradient of the Kelly curve is slowing down,
+
+we're getting less and less profit for every unit of risk that we're kind of gaining. Not only that, but Kelly
+
+position sizing doesn't account for correlation and the effects of weighting assets in different ways
+
+to affect portfolio volatility either. So put simply, we have to be very, very careful in how we
+
+interpret the Kelly criterion. It's a formula that maximizes profit given known inputs um as
+
+traders and portfolio managers this isn't really except acceptable to take it face value because
+
+firstly maximizing profit with no regard for risk is not sensible or rational um we want to maximize
+
+our risk adjusted returns but secondly the inputs and this one's probably more important even than the first. The inputs into the Kelly equation aren't known. They're estimates or expectations and they can have a lot of variability.
+
+So by interpreting the value of Kelly as traders and portfolio managers, I suggest two approaches. Firstly, Kelly can be used merely as an indicator of performance rather than a position sizing metric.
+
+So a higher Kelly score would indicate better performance. That could be interpreted both across portfolios
+
+or through your own portfolio or through one portfolio through time. Secondly,
+
+if using the Kelly criterion to help with position sizing, then it's probably sensible to firstly
+
+adjust the Kelly output to a certain fraction. One way to do this is just to take an arbitrary
+
+fraction that you think is sensible and adequately adjust for risk. Another is to use the betting Kelly criterion, which will tend to be lower
+
+since it assumes that losing trades lose the entirety of their position size.
+
+You could, of course, use a combination of the two as well.
+
+But even when making adjustments like I've suggested there,
+
+it's better to use Kelly nearly as a guide.
+
+You have to add your own interpretation over the top of it which is why I went into so much
+
+detail here to explain what the Kelly criterion is and also why we look at so
+
+many other performance metrics. And remember guys even if we ignored those
+
+two huge issues with using the Kelly criterion as a position sizing metric then the output of Kelly
+
+is always only there to give you an absolute limit maximum limit in position sizing it's not a
+
+recommendation. Speaking of other performance metrics then let's have a look at some now starting
+
+with the Sharpe ratio. So the Sharpe ratio is a performance metric that we've already talked about in the course and it
+
+uses statistics that you guys will be very familiar with at this point. So the
+
+full formula is the Sharpe ratio is equal to the annualized portfolio or asset
+
+mean return minus the annualized risk-free rate, that's the numerator of
+
+the equation, divided by the denominator which minus the annualized risk-free rate, that's the numerator of the equation,
+
+divided by the denominator, which is the annualized standard deviation of portfolio or asset returns.
+
+So as you can see there, the Sharpe ratio is a performance metric that tries to account for both risk and return. And the reason why the risk-free rate is included in the formula is because,
+
+strictly speaking, the Sharpe ratio is set to measure the excess return achieved for a given
+
+level of risk. In this case, that risk is defined as a standard deviation, as you can see in the
+
+denominator of the equation. Since we are more concerned with achieving absolute returns at ITPM rather than
+
+excess returns, we can use something called the gross sharp ratio, which is exactly the same,
+
+but without the risk-free rate in the numerator of the equation. So basically,
+
+it is just the annualized mean return divided by the annualized standard deviation.
+
+So the positives of using the sharp ratio ratio or gross Sharpe ratio as a performance indicator are that it's simple to calculate
+
+and it provides some measure of risk adjusted performance as opposed to just looking at pure returns.
+
+negatives are that firstly it implies that your returns are normally distributed because of the
+
+assumption of a standard deviation which as we know often returns aren't distributed whether they be
+
+in assets or in your portfolio and secondly the risk is captured as total volatility not just
+
+downside volatility. I'm going to talk about that a little bit more when we get into the
+
+next performance metric. So as you can see here we have the formula for the gross sharp ratio which
+
+is suitable for our applications since we're interested in absolute returns as I said before
+
+and as far as interpretation of gross sharp ratio output goes here is a rough guide for you guys so negative
+
+values mean the portfolio has negative returns which is obviously bad a value between 0 and 0.5
+
+is poor a value between 0.5 and 1 is suboptimal still not very good above 1 to 1.5 starts to look okay to fairly good. 1.5 to 2 is very good and
+
+anything above 2 is excellent really. So that was the Sharpe ratio. Let's consider something now
+
+called the Sortino ratio. The Sortino ratio is very similar to the Sharpe ratio, but instead the numerator looks at downside volatility, not total volatility.
+
+Now, as we saw in the previous video, downside volatility can just be calculated by taking the standard deviation of only the negative historical returns,
+
+once all the positive returns have been entered as zero values.
+
+So the formula for the Sortino ratio is as follows. The Sortino
+
+ratio is equal to the annualized portfolio or asset mean return minus the annualized risk-free
+
+rate, that's the numerator, divided by the denominator, which is the annualized downside
+
+deviation of the portfolio or asset returns. Again, just as with the Sharpe
+
+ratio, since we're concerned primarily with absolute returns here, the risk-free rate can be removed in
+
+this formula for our purposes, and that will instead give us what I call the gross sortino ratio.
+
+Now, in terms of usage, this metric is good to look at in combination with the Sharpe ratio really.
+
+In returns distributions, so looking at portfolio returns distributions that are skewed and therefore not normal,
+
+the Sortino ratio will provide much better insight and comparison across portfolios.
+
+That's because the Sortino ratio doesn't punish portfolios with positive skew, but it will punish those with negative skew.
+
+And that is basically what we want to see and something that can easily be missed by the Sharpe ratio since it treats both upside and downside volatility equally.
+
+thing to note here is that the Sortino ratio and the Sharpe ratio aren't actually directly
+
+comparable. You do need to look at both and that's because structurally speaking the Sortino ratio
+
+should always be higher than the Sharpe ratio which when you think about it actually makes sense
+
+because what we're doing in the Sortino ratio is restricting the magnitude of the denominator in
+
+the equation by limiting the volatility calculation to only consider returns values below zero.
+
+As I did with the Sharpe ratio previously, here I've removed the risk-free rate from the equation,
+
+which yields what I call the Gross-Sortino ratio this time.
+
+And as far as interpretation of the gross sortino ratio outputs go you
+
+can think of these figures as a rough guide so negative values of the sortino
+
+or gross sortino ratio mean the portfolio that you're looking at has
+
+negative returns obviously that's not good values between 0 and 1 suboptimal
+
+between 1 and 2 is reasonable and between two and three is good and above three
+
+is very good now with these with all these kind of rough guides i'm providing you with with values of
+
+performance metrics you need to take them with a bit of a grain of salt um they're just they are
+
+just there to kind of give you a rough interpretation of values, but you are actually going to get to know what these values mean a lot more as you keep monitoring your own performance as well.
+
+OK, so moving now to the Calmar ratio, this is another performance metric that recognizes that traders and portfolio managers are more concerned with downside volatility than upside
+
+volatility. Just like the Sharpe and Sortino ratios though, it does provide a ratio of return to risk,
+
+but the risk denominator in the equation takes a different format to the previous ratios and
+
+instead uses the maximum drawdown rather than a standard deviation.
+
+So the formula is as follows: the Calmar ratio is equal to the annualized portfolio return divided
+
+by the maximum drawdown of the portfolio and the maximum drawdown of an asset or portfolio
+
+of an asset or portfolio is taken as the maximum negative return over any peak to trough in the portfolio or asset index price historically. Strictly speaking, actually in this sort of
+
+financial industry, the Kalmar ratio usually defines a period over which the annualized return
+
+and maximum drawdown is calculated from rather than the entire
+
+history of the portfolio or asset that you're looking at and the reason why that's done is
+
+basically to make these ratios comparable across portfolios since it makes sure that portfolios
+
+are being judged during the same kind of
+
+macro conditions and over the same time. The time window used however is kind of
+
+completely up to the analyst or trader looking at all the data and that being
+
+said at ITPM we do actually tend to calculate a Calmar ratio that uses the
+
+entire trading history of an account as well with the acceptance of course that
+
+the ratios aren't necessarily directly comparable across our traders but the longer the
+
+trade history the more flexibility that we give to the ratio value and the lower
+
+the threshold actually lies for a good Calmar ratio that is for two reasons
+
+firstly it means the trader may have consistently achieved high
+
+returns for longer. And secondly, the max drawdown has been controlled over a longer period and
+
+through more sort of macro shocks and trading conditions. The reason why it can be useful for
+
+us to measure Calmar ratios over all trading history is so that we can generate the
+
+ratios for almost all of our traders even those with shorter sort of portfolio histories and it
+
+also allows us to maximize the use of the data that we have available which can also help remove
+
+potential bias effects as well. So that being um it is kind of hard to give a guide
+
+of what views constitute a good almar ratio but a reasonable starting point is probably the
+
+following so again negative and next the portfolio has negative returns that's obviously bad
+
+returns that's obviously bad and between 0 and 0.5 is most likely pretty bad between 0.5 and 1 is okay again depending on portfolio history if the
+
+portfolio history is very long it might be okay if it's quite short and not
+
+traded through much in the way of kind of macro disruption or difficult trading conditions, then that's probably
+
+quite bad. Between one and two, it's fairly good, again, depending on the portfolio history,
+
+and above two tends to be very good. That is in most circumstances, again, unless it's a very
+
+short time period or there really hasn't been much difficulty in
+
+market trading conditions at all. The reason why these values depend on the history of the portfolio
+
+is for the reasons that I've alluded to already. In general if the portfolio being analysed has a
+
+short history then these Kalmar ratios aren't as
+
+good as the same values with a longer portfolio history. Now, to be fair, you could say the
+
+same thing for other performance metrics as well. But because the all-time Kalmar ratio
+
+uses a single risk value that is
+
+equal to the maximum drawdown of all time it's structurally biased downwards
+
+since the denominator can only get worse over time it can't actually get better
+
+okay so those are the four new metrics that we're going to be looking at now for
+
+our model portfolio so let's head over to the spreadsheet now and do some analysis.
+
+Okay, so here we are, back looking at the same model portfolio as in the previous video,
+
+but this time with some updated statistics to look at.
+
+Now I'm going to start in the portfolio value sheet this time and we're going to check
+
+out the performance ratios that I just discussed in the presentation. But first, let's address the max drawdown figure that can be seen in cell C11.
+
+The maximum drawdown by ITPM standards is the largest percentage decline in portfolio value
+
+seen over the entire history of the trading book.
+
+In this case, that's roughly 13%.
+
+Now, depending on what events
+
+this trader has traded through and how much leverage has been used will change
+
+your opinion on whether that value is acceptable or not I think for the
+
+purposes of this portfolio it isn't bad but it isn't great either this portfolio
+
+is obviously navigated through the 2020 markets with a max drawdown of 13% so
+
+that's quite
+
+impressive on the one hand but then again this is an unleveraged long short portfolio and that drawdown
+
+did actually happen in the second half of 2020 when volatility was going lower post-covid.
+
+That being said though overall I don't think there's a whole lot to complain about with this figure.
+
+Now if we move on and look at the performance table down in rows 13 to 16 here,
+
+you can see that this trader has a gross sharp ratio of 1.62, a calmar ratio of 2.18 and a sortino or gross sortino ratio of 2.68.
+
+In general, I'd say these are really good statistics especially
+
+for a retail trader. We do need to be wary of the fact that the trading history for this
+
+account isn't huge it's only a year and a half but still I think that particularly the
+
+Sharpe and Sortino ratios that we're looking at here are pretty strong despite that. The Cal-Mile ratio is also good,
+
+but like I said previously, it's sometimes hard to judge it because it is subject to the trading
+
+history of the portfolio and the conditions that have been traded through. When you guys are looking
+
+at these values in your own portfolios, obviously you need to understand that they're all less
+
+statistically significant if you've traded over a shorter period. Also, you might find it difficult
+
+to interpret these values to begin with because it's hard to kind of benchmark and understand
+
+what good values are for each of these metrics. If you're feeling
+
+like that then I can suggest a couple of things. Firstly, in the presentation previously
+
+I showed you rough guides for each metric that should give you a bit of an idea about the
+
+sort of values that can be interpreted in different ways. And the second thing I suggest
+
+you do is start calculating some of these ratios for all sorts of assets and indices. You
+
+can calculate all this stuff pretty
+
+easily for any stock or any stock index for example and at least then by doing that you've got some
+
+idea of how these metrics can be judged across those assets and therefore how your portfolio
+
+kind of matches up. Now you should of course expect your portfolio to perform better
+
+than the average stock and stock index for example but at least by looking at these figures for those
+
+assets you will have a little bit more perspective about what values are good and bad. Another thing
+
+you should be doing with your own portfolio performance metrics is paying attention to how they actually move over time.
+
+That's another way to help you understand what good values are.
+
+A really easy way to figure out how you're doing is if the metrics, of course, are increasing over time.
+
+It generally means your performance is likely getting better and better as a trader.
+
+OK, let's move over to the realized P&L sheet now
+
+and there are a couple of new things to talk about here as well. Firstly if you take a look at the
+
+right hand side of the sheet here I've now got two histograms one that looks at a distribution
+
+of returns as we saw previously and another that looks at the distribution of trade time horizons, that is
+
+the number of days each trade has lasted. Secondly we've also got the full kelly and betting kelly
+
+values in the summary statistics box at the top of the sheet here which I'm going to address shortly.
+
+So let's start by looking at the trade time horizon distribution first.
+
+Now I've split the ranges that we're counting the frequency of trades within into intervals that are
+
+five days long. So you can see here that for example this trade has made two trades that lasted
+
+for less than five days, 12 trades that lasted for 35 to 40 days, and five trades that lasted for 35 to 40 days and 5 trades that lasted for more than 90 days.
+
+The counts for all of these ranges have been converted to percentage frequencies and then
+
+plotted in a histogram chart for interpretation.
+
+If we take a look at this traders data, we can see that generally speaking, the majority
+
+of trades are well within the 1 to 3 month horizon sweet spot that I've talked about or that we've both talked about, myself and Anton, previously in the video series.
+
+So it looks like this trader is doing a good job here. We can see that the average and median measures of days in trades
+
+are around 50 calendar days which is just over a month, a month and a half I should say.
+
+And at the tails of the distribution there have been a few trades although not that many
+
+that have lasted for less than a month and for more than three months at the other end
+
+as well.
+
+If we wanted to find out more about those trades and figure out what happened with those particular
+
+positions then you could start by filtering the individual realized
+
+trade data as we did in the previous video. So let's do that again now quickly
+
+and sort the days in trade column by smallest to largest. To do that I'm just
+
+selecting any one of the table titles in row six and navigating to data on the
+
+ribbon followed by filter and
+
+clicking the filter button and from there we just select the filter drop down in the appropriate
+
+column so column j in this case and select to sort from smallest to largest so that we can see
+
+all of the short-term trades at the top of the sheet
+
+okay so very quickly here we can actually see that the trades that had very short
+
+time horizons of less than 10 days all occurred in the period of kind of March-April time in 2020.
+
+Now that time was of course, as we all know, when the Covid pandemic first hit the markets hard
+
+and volatility went through the roof. We don't really have to go any
+
+further in this case because we know that in high volatility environments, certainly under market
+
+conditions like we were in then, trading on such short-term time horizons is actually perfectly
+
+valid. And at the other end of the scale, if we scroll to the bottom of the sheet, there's only
+
+really a couple of trades that lasted much longer than three months or 90 calendar days.
+
+So I wouldn't really be too worried about any of these, apart from possibly the fact that
+
+there are two overstock trades that both had particularly long trade horizons.
+
+And actually, if we look at that more closely, we can see the total span there is from the
+
+8th of September 2020 to the 3rd of
+
+november 2021. it is certainly possible that a stock could be a good trade twice over that period
+
+we have to consider the strong possibility that with this trader there has been some kind of
+
+favorite stock bias developed here and he might be becoming he or she might be becoming
+
+biased towards that position now in this case that seems even more likely since the position
+
+is long both times and it wasn't particularly profitable over the course of the two trades
+
+now obviously when you're doing this sort of analysis on your own portfolios you're going to
+
+know at this stage whether or not you're actually glued to or favoring a stock without proper
+
+reasoning or if not it should at least make you analyze why those trades occurred and it should
+
+have. So those are the sort of
+
+of things to look out for when analyzing the trade horizon histogram. I hope that makes sense and gives
+
+you a few ideas. Remember once you're done with the filter and sort options on your realized trade
+
+data you need to make sure that you resort by the trade number in column A to get everything back in
+
+order. All right so the final thing to look at here in terms of analysis is the Kelly criterion.
+
+In this sheet I've calculated the full Kelly and the Betting Kelly, and as I said previously
+
+it's very important to understand the theory behind the Kelly criterion if you're thinking
+
+about using it.
+
+As a reminder, the Kelly criterion is the optimal position size in order to maximize profit or growth in wealth
+
+given known parameters. It doesn't account for risk and it doesn't account for uncertainty in inputs
+
+into the equation. Now for both of those reasons it's a good idea to think about the Kelly criterion
+
+in two ways. Firstly, simply as a performance metric, like the ratios that we've already looked at,
+
+where you can compare two or more assets or portfolios to see which has the higher Kelly
+
+and hence potentially better performance. The other is to use it as a guide to help with
+
+position sizing. However, if you do that, it needs to be as a guide, bearing in mind that the Kelly value is a theoretical maximum limit of position size,
+
+and also that it has failings to account for risk and unknown inputs, which mean we should scale it back quite dramatically.
+
+That probably means using a combination of the adjusted betting Kelly number and actually using just a fraction of that number.
+
+Unfortunately, I can't tell you exactly what fraction to use because it probably depends on the number of factors,
+
+such as the amount of data that you've got collected in your portfolio returns,
+
+meaning the number of trades you've made, basically, and also your risk profile.
+
+number of trades you've made basically and also your risk profile. Once you've been trading for a while and you've watched how the values of the full and betting kelly move you'll probably be
+
+able to come up with a fractional kelly that does actually make sense for you. Anyway in this case
+
+the full kelly percent is ridiculous it says the optimal position size for this account's next trade is 224% of the total portfolio value, meaning 2.24 times leverage.
+
+You have to remember that this is based off the statistics that we have being guaranteed.
+
+So the chance of winning being 56% and losing being 44%.
+
+And if it's a winning trade trade it will make 21.6% and if it's a losing trade
+
+it will lose 13.09%. Treating those values as certainties is obviously a false game which is
+
+why the Kelly criterion must be stronger
+
+reduced by a certain factor and/or the betting Kelly used as well. Remember the
+
+betting Kelly is usually lower because it always assumes that in a losing trade
+
+100% of the position is actually lost. The betting Kelly for this trader is a
+
+bit more sensible with that in mind with a value of around 29.4% but even then
+
+you might want to apply a fraction
+
+to that number which then represents a guide for your maximum position size.
+
+Remember it's always a reference to your maximum position size as well it's not
+
+the average or a recommendation. Okay so now we've been through the analysis let
+
+me show you how to build and calculate these extra sections that I've talked about here.
+
+And what I've done here is switch to a worksheet version of the spreadsheet so that we've got space to fill in all of these calculations that we want to.
+
+We're going to start in the portfolio value sheet again, and we're going to calculate the maximum drawdown in cell C11.
+
+But to do that, we need to calculate the rolling drawdown in column L first.
+
+So in cell L20 I'm going to type the formula and just bear with me on this one guys because it
+
+is quite a long one. The formula is =min - the maximum function in brackets,
+
+cell k19 to k20 with k19 as a fixed reference,
+
+close brackets twice, divided by max, open brackets, the same range,
+
+cell k19 fixed to cell k20, close brackets, comma zero, close brackets comma 0 close brackets okay so although that formula probably sounds crazily
+
+complicated to you guys it really isn't all this calculation does is basically works out the current
+
+drawdown percentage of the portfolio index from its maximum value in the past it does that by
+
+taking first the current level of the index in column K. So for this first
+
+formula here, that's cell K20. It then subtracts the index up to that. So for this, that's just K19
+
+to K20, and then divides it by that same value. Okay, so that's just basically creating a returns formula there from the current
+
+point in time to the maximum historic peak in the index if the index is at a
+
+new high in the current period then the returns going to be positive and
+
+obviously drawdowns can't be positive so if that's the case we just want to take a
+
+zero value so in order to kind of
+
+do that in this formula we just surround the formula by a minimum function where we take the
+
+minimum of the return we just calculated or zero. Hopefully that makes sense to you guys and if not
+
+I'm sure you'll be able to break it down
+
+in your own time when you get hold of this template file. So with that formula
+
+entered it can be copied down the sheet in the usual way and then we can move on
+
+to cell C11 which is calculating the maximum drawdown. Now rather confusingly
+
+to find the maximum drawdown is the minimum XL function on column L and
+
+that's because to find the drawdown with the greatest magnitude,
+
+since all the values are negative or zero, we need to find the lowest negative value.
+
+And to do that we can just use the formula =ABS, so that's the absolute function, open brackets,
+
+minimum, sorry min, that's the minimum function, open brackets again, column L, so L, and
+
+closed brackets twice.
+
+The reason we use the
+
+absolute function around the minimum function to display our maximum drawdown
+
+is so that it's a positive number despite being derived from negative
+
+numbers and that's just really for convention and the fact that it sort of
+
+also makes it slightly easier to input into the Kalmar ratio which we're going
+
+to do shortly. Now as you can see here the maximum drawdown value obtained is 13%
+
+which is fine considering the trading history of the portfolio as we kind of
+
+looked at earlier. Moving on to the gross sharp ratio now in cell C14 this is
+
+just equal to the annualized mean return divided by the annualized standard
+
+deviation. So the formula here is simply annualized mean return divided by the annualized standard deviation.
+
+So the formula here is simply equals cell D3 divided by cell D8.
+
+Now I've already talked about these performance metrics enough at this point, so I'm just
+
+going to skim through them and show you the Excel formulas from now on rather than expanding
+
+on things any further.
+
+So next up is the Kalmar Ratio and that is again the
+
+annualized return but this time divided by the maximum drawdown. So formulaically
+
+that is just equals D3 divided by cell C11. And finally the Gross-Sortino Ratio
+
+is the annualized mean return divided by the annualized downside deviation. So in
+
+cell C16 I'm just going to enter the formula equals D3 divided by D9. And there we have
+
+it. That's all you need in the portfolio value sheet. Let's go over to the Realized P&L sheet
+
+now and run the required calculations there as well. As we've already talked about, the
+
+new aspects of this sheet are the trading time horizon histogram
+
+and the Kelly criterion.
+
+I'm going to start with the trading time horizon histogram first,
+
+and I'll just go through this really quickly since we've already covered all of these principles before multiple times.
+
+So when you're building the histogram data from trading time horizons a sensible range of data to cover in terms of intervals is probably from five to 90 days since there's 90 calendar days in three months
+
+roughly and that is the top end of our desired trading horizon under normal market conditions so
+
+Starting in cell 09, I'm going to type in the intervals that we want, which are going to be 5, 10, 15.
+
+And then once I've entered those three numbers, actually all I'm going to do here is get Excel to autofill that interval width down all the way to cell 026 by clicking and dragging the green autofill square with cells 011 and O12 selected down to cell O26.
+
+In the next column, which represents our text labels for the ranges created by the intervals we defined,
+
+I'm just going to start by typing in some relevant labels.
+
+So in cell P9, that's going to be less than 5.
+
+Then in the cell below, it will be 5 to 10 or between 5 and 10 and
+
+then between 10 and 15 and so on all the way down to the bottom
+
+so with those labels completed we can move on to the count column now.
+
+And in this column, we're just using the COUNTIF function to create the number of data points
+
+that lie within these ranges that we've just created.
+
+So in cell Q9, the formula will just be count and then open brackets, column J, that's J
+
+colon J, comma, and then in quotation marks less than
+
+mathematical operator then ampersand cell 09 and that's just saying count all of the values in
+
+column j that are less than the value seen in cell 09. In the cell below cell cell Q10, the formula will just be equals count ifs this time, so not count ifs, it's count ifs, plural.
+
+Open brackets, column j again, j colon j, comma, in quotation marks, greater than or equal to, mathematical operator,
+
+ampersand 0, 9, the cell 0, 9, then another comma, column j, again, j again J colon J comma in quotation marks
+
+are less than sign and then ampersand 010 and again that formula is just saying
+
+count all the values in column J subject to two criteria this time one is
+
+greater than or equal to cell 09 and one is less than 010. So the values that are counted are 010.
+
+That formula can then be copied down to cell Q26,
+
+and then finally, we can enter a formula into cell Q27
+
+for counting the number of trades with trading time horizons of over 90 days,
+
+and that will just be equals count if
+
+greater than whatever value we see in
+
+O26. So greater than mathematical operator in quotation marks
+
+followed by an ampersand to link it to our cell reference of O26
+
+and close brackets. Following that, as per usual,
+
+we can convert these counts that we have in column Q to percentage frequencies in column R.
+
+And to do that we just divide each of these counts we have by the total number of trades.
+
+So the formula I'm going to enter here in cell R9 is therefore equals Q9 divided by the sum
+
+of the range that we see in cells Q9 to Q27. Remember to fix the sum array reference in
+
+that formula because we don't want it to move
+
+when we copy this formula down.
+
+Now to copy this formula down, since we're starting from the top of the copy down end
+
+of the thick borders, I'm just going to select cell R9 and right click and drag the autofill
+
+box down to cell R28 and then choose to fill without formatting.
+
+Finally, in this histogram table, the cumulative frequency in column S just calculates the cumulative
+
+sum of all the frequencies at or below the associated range. So cell S9 is just going to
+
+be equal to R9, but after that the formula will change. So in cell S10 this cell will be equal to R10 plus S9
+
+and then from there we can just copy that formula down using the right click
+
+and drag method to avoid any formatting issues. Just before I move on to plotting
+
+this data in a histogram chart let's calculate the average and median days
+
+per tray down here as well. Starting with the average in cell P30 the formula will just be equals average of column J and
+
+then similarly for column for cell P31 I should say to calculate the median we
+
+just use the median function in the formula so it's equals median open
+
+brackets column J so J colon J
+
+closed brackets okay so let's plot this data in a chart now and to do that I'm
+
+going to select cell u9 and and go to insert on the followed by the UD column
+
+chart option next I'm just going to move and resize the chart area appropriately here.
+
+And with that done, to enter data into the chart, I'm just right clicking inside the chart area, navigating to select data and then add series.
+
+The series name is going to be equal to cell R8, which is the frequency title cell.
+
+And then the series values will be the cell range from R9 to R27 which is all of the frequency data that we have. After that we need to choose suitable labels of
+
+course for the horizontal axis to match up with that data and the labels that we are
+
+going to use are in column P and so I'm going to click on the edit horizontal axis labels button now and choose the axis label
+
+range which will be cell p9 to p27 and that's basically it if you want to of course you can
+
+format this chart as much as you want for example you might want to put axis
+
+labels on and so on but I'm just going to leave that stuff to you guys I'm sure you all know how
+
+to do that by now. The final sort of calculations we've got to look at here are the Kelly criterion
+
+calculations and what I've got here is the Kelly criterion both in its full format and its betting
+
+format. Now as with the other performance metrics that we've looked at I'm not going to talk about
+
+the Kelly criterion any further just because we've kind of already covered it in a lot of
+
+detail.
+
+All I'm going to do at this stage is show you the Excel formula that you need to use
+
+given how this sheet is set up.
+
+So starting with the full Kelly in cell K3, the formula is equals open brackets cell I2 divided by the absolute value of cell S61,
+
+and close those brackets, minus open brackets cell I3 divided by cell S60.
+
+So that's just taking the winning percentage divided by the absolute value of the average losing return
+
+and subtracting from that the losing percentage divided by the value of the average losing return and subtracting from that the losing percentage divided by the value
+
+of the average winning return. And as you can see here, we have the same value that we discussed
+
+previously, which is 224%. The betting Kelly criterion is exactly the same, apart from it
+
+assumes that losing trades lose 100% of the position size and winning trades win a multiple of that defined by a certain ratio.
+
+So in cell K4 the formula that you can use is simply equals I2 minus in brackets I3 divided by
+
+our ratio which is cell S60 divided by the absolute value in cell S61 and close all of those brackets.
+
+the absolute value in cell S61 and close all of those brackets. Now that formula is basically saying we take the winning percentage minus the losing percentage divided by the ratio between
+
+our average winning return and our average losing return and that ratio is worked out by dividing
+
+the average winning return in cell S60 by the absolute value in cell S61, so our average losing return.
+
+And as you can see here, the output we get is 29.4%, which is significantly lower.
+
+And you'll remember, as I said previously, that's always going to be the case because
+
+the formula assumes that in losing trades we lose 100% of the position size.
+
+Now, I'm just going to say this once more. Remember that the Kelly criterion
+
+is based on underlying assumptions that inputs are known and that profit is desired to be maximized
+
+with no respect for risk. And that makes it a really dangerous number to use for position sizing
+
+if taken at face value. If you do want use kelly to help with position sizing you need
+
+to choose a method to make the value that you use much more conservative i would say
+
+and whether that be using a fractional
+
+lee score or
+
+probably most likely a combination of this and even that the kelly position sort of um
+
+the kelly criterion uh output is the maximum limit on a position size and it's not an average or a
+
+recommendation okay guys so that is almost everything i wanted to cover regarding trading
+
+statistics and performance monitoring over the last two videos.
+
+The last thing I want to quickly show you here is a template.
+
+So this template here that I've built to help you speed all of this stuff up.
+
+So this template is going to be available for you guys in the download section of the video.
+
+And as you can see, it looks very, very similar to the spreadsheet that I've been covering in these videos. The only differences really are in some
+
+of the formulas which are built in a way that are a little bit more complex but a little bit more
+
+robust as well when it comes to entering your own data. So let's start with the portfolio monitor
+
+sheet. In this tab all the blue cells have formulas in them that shouldn't be edited.
+
+All you guys need to do is keep on top of the data in the white cells and the spreadsheet will do the
+
+rest. There's not much more really to say in this tab. In the realized PNL sheet it's pretty much
+
+all the same. All the yellow cells at the top and the blue cells in columns J to M and all the data
+
+in histograms will update automatically based on what you enter
+
+in the white cells from row 7 down in columns A to I. So basically this table here. Do remember though
+
+that you do need to control the length of your cell of your formulas running in the blue cells
+
+to match the amount of data that you've got in the associated white cells in the table.
+
+Basically meaning if you add data remember to auto fill those formulas in the blue cells down for every new entry.
+
+Everything else here should be pretty straightforward.
+
+Exactly the same principles apply for the portfolio value sheet as well.
+
+The yellow and blue cells are formula driven and whenever you update the white cells with your own data,
+
+everything else should automatically update. That being said if you do run into any issues then you guys should
+
+be able to figure out what's going wrong and fix it fairly easily just by re-watching this video
+
+and paying particular attention to the sections where I've covered all of the calculations and
+
+how to actually build these spreadsheets.
+
+Okay guys, that is it from me. I hope you enjoyed the video. Remember the most important part of this really is the interpretation of your trader's statistics because that is what's really going to
+
+accelerate your competency. Anyway, good luck guys and enjoy the rest of the video series.
+
+Thank you.

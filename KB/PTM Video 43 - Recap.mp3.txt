@@ -1,0 +1,547 @@
+okay guys welcome back to the screen congratulations you have done it we have got to the end of the
+
+professional trading masterclass video series so well done it is no easy feat by any stretch
+
+of the imagination to take on this challenge and to start yourself on the road of climbing
+
+the competency hierarchy towards a professional trading level.
+
+Now what we're going to do is here to round off the video series, we're going to do a recap
+
+of everything you have learned just to formalize the entire overall video series
+
+and the entire process. And we're also going to look at how you can get yourself organized
+
+and the next steps that you need to take to continue on your journey. So what have you actually learned in the PTM video?
+
+Well, we have a table here with all the videos and the titles,
+
+so you can see the entire video series on one screen.
+
+And also we've included in the table a time code for each video
+
+and the total time of the video series,
+
+which comes to 64 hours, 19 minutes
+
+and 18 seconds, not including video 43 and video 44, which is essentially a summary and
+
+also preparations for your next steps.
+
+And you'll actually find this table quite useful.
+
+So we uploaded it for you,
+
+and it's available on the website
+
+in the downloads area under this video.
+
+You'll find it useful in the future,
+
+just referring to what you have learned
+
+and any other people, any third parties
+
+that you want to show this to,
+
+you can do so very easily
+
+because it's all summarized there for you.
+
+So what have you learned?
+
+Well, you've watched 64 hours of videos,
+
+and if you add on the spreadsheet work
+
+of the PTM video series,
+
+that's easily over 100 hours of tuition and self-work.
+
+And if you add on the IPLT video series to this,
+
+as the IPLT video series really is preparation for the PTM video series,
+
+if you include that and the associated spreadsheet work,
+
+you've probably done to this stage 150 to 200 hours of total tuition and self-work to get this far. And it is obviously a
+
+lot of work, but this is what it takes to start off on the road to professional trader status and
+
+to climb the competency hierarchy.
+
+So right now you are in the theory, the learning stage.
+
+And if you think about your evolution up the competency hierarchy towards professional
+
+level trader status, you obviously now are very close or thinking about moving on to
+
+the implementation stage. So we have our theory
+
+stage and our implementation stage. And in total, for anyone to get to a level where they can claim
+
+conscious competency with a full-time job, you're basically looking at three to six months of theory and nine to 12 months
+
+of profitable implementation to be able to claim that status of conscious competency.
+
+So essentially, you're looking at 12 to 18 months to enable yourself at a minimum to claim conscious competency.
+
+But as you can see from the amount of work that you put in into the theory,
+
+plus your first three to six months of trading with a live trading account,
+
+all the hard work really is done in the first six months.
+
+hard work really is done in the first six months.
+
+Because you really do need to trade live with real dollars after you've done the theory for at least one quarter to make that jump from theory to implementation.
+
+And then as you implement successfully over time, over a period of nine to 12 months,
+
+that's when you become consciously competent.
+
+So before we start talking about implementation
+
+and next steps, let's just go through the map
+
+of the PTM video series as a recap
+
+of what you've actually learned.
+
+So first things first
+
+before we got into the meat of the PTM video series and the professional trader
+
+systematic process there's groundwork that needs to be done and if you've done
+
+the IPLT video series that was perfect preparation for coming into the PTM video series if you
+
+haven't done that I would urge you to do that as it really does set you up to
+
+understand the information better in the PTM video series but if you've done it
+
+it is really good preparation and groundwork before starting the PTM video series.
+
+And then we essentially overlap into the PTM video series by starting out with the framework.
+
+And the framework of how the IPLT video series and the disciplines learned there over
+
+lapsed with the framework of the PTM video series. And we actually looked at the framework of the PTM video series and the pro trader systematic process in a bit more detail and put everything into context to enable us to move forward.
+
+And then we laid the groundwork to lead us into the PTM video series with the field of play, the stock market, and how it links to gross domestic product. series were essentially preparation to enable you as a retail trader student of the professional
+
+trader process to understand how it works. And then after the preparation phase, we got right
+
+into the meat of the process itself. And we started with a big, big topic,
+
+macroeconomics and quantitative processing.
+
+And we looked at all of the main leading indicators
+
+in the United States to enable us
+
+as long-short portfolio managers to establish
+
+at any moment in time in our lives a portfolio bias.
+
+And when it comes to macro, we actually revisited macro later in the video series
+
+to look at direct macro-driven trade ideas
+
+and also generating international trade ideas via ADRs.
+
+So the same quantitative processing that we engaged in with macroeconomic
+
+leading indicators from video 4 to video 14, that same process also applies to generating
+
+international trade ideas. And all we have to do is use international leading indicators to do that. Once we covered
+
+leading indicators and macro in the US, we then moved on to foundations of long short
+
+portfolio management with Christopher Quill. And Chris went through all of the key disciplines and with all of the resources as well
+
+for portfolio modeling, portfolio volatility, portfolio correlation, and portfolio beta.
+
+And having these disciplines is really crucial if you're going to climb the competency hierarchy and have regular weekly and monthly processes
+
+in understanding the dynamics of a portfolio
+
+and to enable you to manage a portfolio well.
+
+Then we actually moved on to the trading.
+
+idea generation process itself by looking at the quantitative processing
+
+stage and looking at individual stocks once we have obtained our portfolio bias
+
+from our macro view and essentially the quantitative processing phase is the first part of the fundamental process in generating a trade
+
+idea. The second part of that process, the fundamental process, is the qualitative processing
+
+phase. And we covered that after the quantitative phase in videos 30 and 31.
+
+And if you recall from the quantitative processing phase, that's all about the identification of potential trade ideas,
+
+not the actual generation of a trade idea.
+
+It is about identifying potential ideas
+
+by having a systematic quantitative process in place to identify those potential ideas.
+
+And then we move on to the qualitative processing phase where we look at the qualitative information behind the numbers of a potential trade idea.
+
+And what we are always looking for in the qualitative processing phase
+
+is for the qualitative information to support the quantitative data.
+
+And next in the video series, we moved on to catalysts trade idea formatting and timing so in the
+
+overall trade idea generation process once we are happy with our quantitative
+
+processing and the qualitative information supporting the data for our
+
+idea to actually be a trade idea, there must be catalysts.
+
+And to qualify catalysts in the 20 to 60 day time horizon.
+
+So we went through a process there that you can now use to identify catalysts in the 20 to 60 day time horizon to essentially turn your process from an investment process
+
+into a real trade idea generation process.
+
+We then moved on to actually formatting trade ideas, and that is essentially organizing all
+
+of the information into a trade idea generation template.
+
+And the teachings there essentially are all about engaging in consistency of process
+
+and not engaging in haphazard processes because
+
+we need consistency in process to enable consistent returns.
+
+So at this stage in the process, when you've done your fundamental work in generating a
+
+potential trade idea and you now have catalysts, identifiable catalysts, this is when you sit
+
+down and you collate all of the information into the trade idea
+
+template and make sure it is all absolutely accurate and perfect. So at this stage, we now
+
+have a trade idea, and then we move on to timing that idea. And we covered in the PTM video series,
+
+that idea. And we covered in the PTM video series, technical analysis and price action.
+
+And we looked at a number of ways in which you can add value to your fundamentally driven trade idea that has catalysts in the 20 to 60 day time horizon.
+
+And essentially what we are looking for with both technical analysis and price action
+
+is that the charts and the price, the price action itself is at least beginning to, or fully supports
+
+our fundamental thesis. And then if everything lines up, we end up taking a position.
+
+And when we take a position and build a portfolio, there must be risk management measures in place.
+
+To enable you to understand the context of why we actually have preventative risk management measures in place,
+
+we actually have preventative risk management measures in place. We looked at all of the main points of trading psychology, and then we covered various parameters and various risk management
+
+measures that you can put in place to be on top of your psychology. Additionally, we also looked at how you eliminate emotion when you're trading
+
+your portfolio and how you actually achieve staying objective. And eliminating emotion and staying
+
+objective led us very nicely into the next part of the PTM video series,
+
+which is actually running your trading account as a business.
+
+And this, at the end of the video series,
+
+is really the cherry and the icing on the cake.
+
+Because running your trading account as a business
+
+and both achieving really good performance statistics and a good
+
+solid track record and being on top of your performance stats and your track record.
+
+This is what separates the big boys from the rest of the market.
+
+So it really gives you an insight into the future and what you're looking to achieve and where you're trying to get to.
+
+So that was a summary there of the video series and everything you've learned so far in the education or theory stage.
+
+so far in the education or theory stage.
+
+What you really have to be thinking about now is moving on to the implementation stage,
+
+where you're actually opening your trading account,
+
+depositing the amount of margin into your account
+
+that you want to deposit.
+
+And remember, there is a minimum
+
+to enable you to do this properly.
+
+And then you've got to start putting into practice
+
+with a real live trading account,
+
+all of the theory, all of the education
+
+that you've learned throughout the IPLT video series
+
+and the PTM video series.
+
+And unfortunately, there are no shortcuts here, guys,
+
+for you to be climbing the competency hierarchy. You have to do this for real, and you have to do
+
+it for a minimum amount of time and over a minimum amount of trades in order to get statistical significance. And so you can claim a minimum level of competence,
+
+that being conscious competence.
+
+And if you recall the evolution of the competency hierarchy
+
+as it applies to retail traders and at ITPM,
+
+you'll recall the four stages of competency.
+
+And without doubt now, at this stage,
+
+you have left the level of unconscious incompetence
+
+and you are currently sitting at the level
+
+of conscious incompetence.
+
+For you to get to the next level,
+
+you have to open your trading account
+
+and begin live trading and get a minimum amount of time and a minimum amount of trades under your belt. you're more than likely going to be at the level of conscious incompetence
+
+until you have that minimum number of trades and minimum amount of time under your belt.
+
+When you get to around 12 months experience,
+
+with those numbers and you're profitable,
+
+then you're climbing out of conscious incompetence
+
+to conscious competence.
+
+And you will be defined at ITPM
+
+as an Institute Trader Tier 2.
+
+And what also helps,
+
+and this is something we'll discuss in a moment,
+
+in terms of raising your overall level of competency is learning how to
+
+apply everything that you've learned in the IPLT video series and the PTM video series
+
+and also in getting a high level of competency, potentially completing a one-on-one mentoring program live with real
+
+money trading with one of our trading mentors at ITPM.
+
+But let's review first what you would have to exhibit as a retail trader at the level
+
+of conscious competence.
+
+trader at the level of conscious competence. To be at the level of conscious competence as a retail trader or any trader, you would have to first really understand the whole concept of risk versus opportunity and be very good at understanding and calculating volatility. In being able to do that, you would competently be targeting a 50% to 100% return with approximately 20% or over annualized portfolio risk.
+
+You will be somebody who clearly knows the difference between a trade idea and an investment idea. You will be able to produce a constant flow
+
+of high-quality trade ideas.
+
+And not only that, you will be competent at timing
+
+in the 20-60-day time horizon, both your entries and exits.
+
+You will also be very competent at trade structuring and finding optimal trade structures.
+
+And this is where learning how to use equity options to express your trade ideas more efficiently
+
+comes in. By having all of these skill sets, you will be able to build a long short 20 to 60 day portfolio very competently
+
+additionally not only just being able to build a portfolio competently you are able to handle
+
+a portfolio competently as well so to be able to do, you would have to have very clearly a handle on your trading
+
+psychology and be somebody that doesn't fall in love with market narratives or their own
+
+narratives and their own positions. To be at that level of conscious competence as well, you would have
+
+to be able to display that you can manage the risk of a 20 to 60 day long short portfolio
+
+competently via preventative risk measures and through your reactive risk management as in the
+
+actions that you take regularly in the account to stay in motion. And then, of course, the cherry, the icing on the cake is your trading
+
+stats and track record. To be at the level of conscious competence, you have to hit those numbers
+
+that we've looked at earlier on in the PTM video series and literally display in your performance statistics and track record consistency in returns and also competency because you are treating your trading account as a business.
+
+to the level of unconscious competence, what traits do retail traders or any trader
+
+have to exhibit to enable them to be at the top
+
+of the competency hierarchy at unconscious competence?
+
+Well, essentially, you are doing all of the above
+
+without even thinking about it too much,
+
+also known as being in the autopilot situation.
+
+It is now natural to you.
+
+It is now innate.
+
+It's a long road ahead, guys,
+
+but you can achieve this in 12 to 18 months,
+
+over 100 to 200 trades,
+
+if you get your head down and do this properly.
+
+So if you choose to do this in the ITPM infrastructure,
+
+your next target is conscious competence
+
+and getting there via implementation
+
+with a live trading account.
+
+And to do that with us at ITPM,
+
+you have to first take your examination
+
+of the PTM video series, then open your trading
+
+account, deposit your margin, then you will have institute trader status.
+
+So you're going to take your exam next, and then you've got to take the knowledge from the ETM video series and the IPLT video series and even
+
+potentially the POTM video series and turn it into cold hard dollars via implementation with real
+
+money. This is the only way you can reach the next stage of the competency hierarchy on your journey to long-term trading success.
+
+So you can apply for your trading account with one of the ITPM preferred brokers on the accounts page of the ITPM.
+
+ITPM website. So www.itpm.com forward slash trading dash accounts. If you go to that page,
+
+you'll see information on the brokers that ITPM have contracts with around the world.
+
+And you will also see copies of the contracts that we have with the brokers. And we choose to put these contracts up on the website
+
+so you can see interest between ITPM and their students.
+
+Why?
+
+Because ITPM receives no ongoing commissions
+
+or part of any spreads that you pay for stocks or options.
+
+Now, when it comes to options to further your chances of long-term trading success, you do have to learn how to trade options properly
+
+at some point. And I would definitely encourage you to get this done sooner rather than later.
+
+I would definitely encourage you to get this done sooner rather than later.
+
+Ideally, you should get this done immediately after you've done the IPLT video series and the PTM video series, while the information from those video series are still fresh in your mind,
+
+and you can continue your learning momentum.
+
+mind and you can continue your learning momentum. So you can do this via the Professional Options Trading Masterclass, the POTM video series, and you can also do this under the supervision of one
+
+of our experienced trading mentors at ITPM, which brings us on to our official mentoring programs. Of course, everybody has the choice to go
+
+it alone, but if you really do want to speed up your progress or at any point you find yourself
+
+struggling to become consistently profitable, so competent at implementation, then you absolutely need a mentoring program with an ITPM senior trading mentor.
+
+This is not a shortcut or a hack to success because you still, as an individual yourself, have to put in the work on a mentoring program.
+
+But assuming that you do,
+
+it will speed up your progress. So if you're interested in a mentoring program at ITPM
+
+with one of our mentors, go to www.itpm.com forward slash trader dash mentoring.
+
+Now, there is one more video where I'm going to cover the examination and preparation for that with you.
+
+But seeing as though we are at the end now of the PTM video series, I'm just going to be a little bit of a video.
+
+I'm just going to say a few words.
+
+Now that you're moving on from the theory to the implementation stage,
+
+it is absolutely crucial that you stay true to the plan and don't deviate.
+
+And certainly do not deviate from the four ITPM principles.
+
+If you recall the four principles of ITPM, first of all, self-sustainability, continue to do your own work to one side. Be conscientious and regularly implement
+
+the processes that you've been taught. And remember, everything in the PTM video series
+
+that you've witnessed is free information. Everything you've seen is literally free.
+
+Everything you've seen is literally free. What is crucial is how you interpret the information and how you turn it into real hard dollars.
+
+And remember, we're not here to put in face time.
+
+The financial markets don't care how hard you've worked.
+
+You have to work smart not hard so please
+
+focus on what matters going forward eliminate the 97% of bullshit and noise
+
+that's out there process efficiently and just make money in your business focus on the bottom line and don't
+
+yet distracted that aim
+
+okay because this is what trading
+
+is all about you're here to make money for yourself
+
+on the pro trader systematic process and all of the spreadsheets and supporting resources
+
+that we've provided here, both myself and Chris Quill
+
+in the PTM video series,
+
+and your own application and hard work
+
+is going to get you there.
+
+It's now time to move onto the implementation phase.
+
+It's time to get your head down,
+
+and it's time to get those results.
+
+So from myself, Anton Creel,
+
+and on behalf of my colleague, Christopher Quill,
+
+it's been an absolute pleasure
+
+putting together this video series for you
+
+and teaching you
+
+all of this content.
+
+You've now acquired a really valuable skill set in the world, and we do hope that you're
+
+going to put it to good and profitable use.
+
+If you choose to become an institute trader and or do a mentoring program, we will see you very soon at ITPM.
+
+And to all retail traders, whether you're at ITPM as an institute trader or you're operating outside the ITPM infrastructure, both myself and Chris wish you the best of luck in financial markets
+
+thank you for your faith and belief in ITPM
