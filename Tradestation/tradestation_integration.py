@@ -44,7 +44,7 @@ class TradeStationIntegration:
             api_client: Optional TradeStation API client (creates one if not provided)
         """
         self.api_client = api_client or self._create_client()
-        self.is_authenticated = False
+        self.is_authenticated = True  # Always authenticated with refresh token approach
         
         logger.info("TradeStation integration initialized")
     
@@ -56,26 +56,10 @@ class TradeStationIntegration:
             logger.error(f"Failed to create TradeStation client: {e}")
             raise
     
-    def authenticate(self, authorization_code: str) -> bool:
-        """
-        Authenticate with TradeStation API.
-        
-        Args:
-            authorization_code: Authorization code from OAuth flow
-            
-        Returns:
-            True if authentication successful
-        """
-        self.is_authenticated = self.api_client.authenticate(authorization_code)
-        return self.is_authenticated
-    
-    def get_auth_url(self) -> str:
-        """Get authorization URL for OAuth flow."""
-        return self.api_client.get_auth_url()
     
     def is_connected(self) -> bool:
         """Check if connected to TradeStation API."""
-        return self.is_authenticated and self.api_client.access_token is not None
+        return self.api_client.access_token is not None
     
     # Market Data Query Methods
     

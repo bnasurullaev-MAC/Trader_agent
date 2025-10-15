@@ -17,10 +17,10 @@ from datetime import datetime
 # Add current directory to path
 sys.path.insert(0, str(Path(__file__).parent))
 
-def test_authentication():
-    """Test the authentication endpoint."""
+def test_refresh_token():
+    """Test the refresh token endpoint."""
     print("=" * 60)
-    print("TESTING AUTHENTICATION ENDPOINT")
+    print("TESTING REFRESH TOKEN ENDPOINT")
     print("=" * 60)
     
     # Load environment variables
@@ -33,53 +33,31 @@ def test_authentication():
     # Get credentials from environment
     client_id = os.getenv("TRADESTATION_CLIENT_ID")
     client_secret = os.getenv("TRADESTATION_CLIENT_SECRET")
-    redirect_uri = os.getenv("TRADESTATION_REDIRECT_URI", "http://localhost:8080/callback")
+    refresh_token = os.getenv("TRADESTATION_CLIENT_REFRESH")
     
-    if not client_id or not client_secret:
+    if not client_id or not client_secret or not refresh_token:
         print("Missing credentials!")
-        print("Set TRADESTATION_CLIENT_ID and TRADESTATION_CLIENT_SECRET environment variables")
+        print("Set TRADESTATION_CLIENT_ID, TRADESTATION_CLIENT_SECRET, and TRADESTATION_CLIENT_REFRESH environment variables")
         return None
     
     print(f"Client ID: {client_id}")
-    print(f"Redirect URI: {redirect_uri}")
+    print(f"Refresh Token: {refresh_token[:20]}...")
     
-    print("\nTradeStation uses TWO endpoints for authentication:")
-    print("1. Authorization URL (to get authorization code)")
-    print("2. Token URL (to exchange code for access token)")
+    print("\nTradeStation refresh token endpoint:")
+    print("POST https://signin.tradestation.com/oauth/token")
     
-    # Show authorization URL (Step 1)
-    auth_params = {
-        'client_id': client_id,
-        'redirect_uri': redirect_uri,
-        'response_type': 'code',
-        'scope': 'read write'
-    }
-    
-    auth_query = '&'.join([f"{k}={v}" for k, v in auth_params.items()])
-    authorization_url = f"https://signin.tradestation.com/oauth/authorize?{auth_query}"
-    
-    print(f"\nSTEP 1 - Authorization URL (GET):")
-    print(f"   {authorization_url}")
-    
-    # Show token endpoint (Step 2)
-    token_url = "https://signin.tradestation.com/oauth/token"
-    
-    print(f"\nSTEP 2 - Token URL (POST):")
-    print(f"   {token_url}")
-    
-    # Test token endpoint structure (without actual code)
+    # Show refresh token request structure
     token_data = {
-        'grant_type': 'authorization_code',
+        'grant_type': 'refresh_token',
         'client_id': client_id,
         'client_secret': client_secret,
-        'redirect_uri': redirect_uri,
-        'code': 'AUTHORIZATION_CODE_HERE'
+        'refresh_token': refresh_token
     }
     
-    print(f"\nToken request data (POST body):")
+    print(f"\nRefresh token request data (POST body):")
     print(json.dumps(token_data, indent=2))
     
-    return authorization_url
+    return True
 
 def test_barcharts_endpoint(access_token=None):
     """Test the barcharts endpoint."""
@@ -146,16 +124,12 @@ def test_with_our_client():
         
         print("TradeStation client created successfully!")
         
-        # Show authentication URL
-        auth_url = client.get_auth_url()
-        print(f"Authorization URL: {auth_url}")
-        
         # Show barcharts method
         print(f"\nBarcharts method available:")
         print(f"   client.get_historical_data('AAPL', interval=1, unit='Daily', ...)")
         
         # Test authentication structure
-        print(f"\nAuthentication endpoint: {client.config.auth_base_url}{client.config.token_endpoint}")
+        print(f"\nRefresh token endpoint: {client.config.auth_base_url}{client.config.token_endpoint}")
         print(f"API endpoint: {client.config.base_url}{client.config.marketdata_endpoint}/barcharts/")
         
         return client
@@ -167,13 +141,12 @@ def test_with_our_client():
 def main():
     """Main test function."""
     print("TradeStation API Endpoints Test")
-    print("Testing the specific endpoints you mentioned:")
-    print("1. GET https://signin.tradestation.com/oauth/authorize (get authorization code)")
-    print("2. POST https://signin.tradestation.com/oauth/token (get access token)")
-    print("3. GET https://api.tradestation.com/v3/marketdata/barcharts/AAPL (use access token)")
+    print("Testing the specific endpoints:")
+    print("1. POST https://signin.tradestation.com/oauth/token (get access token from refresh token)")
+    print("2. GET https://api.tradestation.com/v3/marketdata/barcharts/AAPL (use access token)")
     
-    # Test authentication
-    auth_url = test_authentication()
+    # Test refresh token
+    refresh_result = test_refresh_token()
     
     # Test barcharts endpoint structure
     test_barcharts_endpoint()
@@ -187,17 +160,15 @@ def main():
     print("1. Set your TradeStation API credentials:")
     print("   export TRADESTATION_CLIENT_ID='your-client-id'")
     print("   export TRADESTATION_CLIENT_SECRET='your-client-secret'")
+    print("   export TRADESTATION_CLIENT_REFRESH='your-refresh-token'")
     print()
-    print("2. Visit the authorization URL above")
-    print("3. Get the authorization code")
-    print("4. Use the code to get an access token")
-    print("5. Use the access token for API calls")
+    print("2. The client will automatically get access token from refresh token")
+    print("3. Start making API calls immediately")
     print()
     print("Example Python code:")
     print("```python")
     print("from tradestation_api import create_tradestation_client")
     print("client = create_tradestation_client()")
-    print("client.authenticate('your-auth-code')")
     print("data = client.get_historical_data('AAPL', interval=1, unit='Daily')")
     print("```")
 

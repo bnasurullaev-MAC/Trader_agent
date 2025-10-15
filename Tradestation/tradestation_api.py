@@ -33,14 +33,12 @@ class TradeStationConfig:
     
     client_id: str
     client_secret: str
-    redirect_uri: str
     refresh_token: Optional[str] = None
     base_url: str = "https://api.tradestation.com"
     sandbox_url: str = "https://sim-api.tradestation.com"
     use_sandbox: bool = False
     
     # API endpoints
-    auth_endpoint: str = "/oauth/authorize"
     token_endpoint: str = "/oauth/token"
     user_endpoint: str = "/v3/users/me"
     accounts_endpoint: str = "/v3/accounts"
@@ -142,54 +140,6 @@ class TradeStationAPI:
             logger.error(f"Error getting access token from refresh token: {e}")
             return False
     
-    def authenticate(self, authorization_code: str) -> bool:
-        """
-        Authenticate with TradeStation API using authorization code.
-        
-        Args:
-            authorization_code: Authorization code from OAuth flow
-            
-        Returns:
-            True if authentication successful, False otherwise
-        """
-        try:
-            token_data = {
-                'grant_type': 'authorization_code',
-                'client_id': self.config.client_id,
-                'client_secret': self.config.client_secret,
-                'redirect_uri': self.config.redirect_uri,
-                'code': authorization_code
-            }
-            
-            response = self.session.post(
-                f"{self.config.auth_base_url}{self.config.token_endpoint}",
-                data=token_data,
-                headers={'Content-Type': 'application/x-www-form-urlencoded'}
-            )
-            
-            if response.status_code == 200:
-                token_info = response.json()
-                self.access_token = token_info.get('access_token')
-                self.refresh_token = token_info.get('refresh_token')
-                
-                # Calculate token expiration
-                expires_in = token_info.get('expires_in', 3600)
-                self.token_expires_at = datetime.now() + timedelta(seconds=expires_in)
-                
-                # Update session headers
-                self.session.headers.update({
-                    'Authorization': f'Bearer {self.access_token}'
-                })
-                
-                logger.info("Successfully authenticated with TradeStation API")
-                return True
-            else:
-                logger.error(f"Authentication failed: {response.status_code} - {response.text}")
-                return False
-                
-        except Exception as e:
-            logger.error(f"Authentication error: {e}")
-            return False
     
     def refresh_access_token(self) -> bool:
         """
@@ -493,28 +443,11 @@ class TradeStationAPI:
         endpoint = f"{self.config.user_endpoint}"
         return self._make_request('GET', endpoint)
     
-    def get_auth_url(self) -> str:
-        """
-        Generate authorization URL for OAuth flow.
-        
-        Returns:
-            Authorization URL
-        """
-        params = {
-            'client_id': self.config.client_id,
-            'redirect_uri': self.config.redirect_uri,
-            'response_type': 'code',
-            'scope': 'read write'
-        }
-        
-        query_string = '&'.join([f"{k}={v}" for k, v in params.items()])
-        return f"{self.config.auth_base_url}{self.config.auth_endpoint}?{query_string}"
 
 
 def create_tradestation_client(
     client_id: Optional[str] = None,
     client_secret: Optional[str] = None,
-    redirect_uri: Optional[str] = None,
     refresh_token: Optional[str] = None,
     use_sandbox: bool = True
 ) -> TradeStationAPI:
@@ -524,7 +457,6 @@ def create_tradestation_client(
     Args:
         client_id: Optional client ID (defaults to TRADESTATION_CLIENT_ID env var)
         client_secret: Optional client secret (defaults to TRADESTATION_CLIENT_SECRET env var)
-        redirect_uri: Optional redirect URI (defaults to TRADESTATION_REDIRECT_URI env var)
         refresh_token: Optional refresh token (defaults to TRADESTATION_CLIENT_REFRESH env var)
         use_sandbox: Whether to use sandbox environment
         
@@ -540,9 +472,6 @@ def create_tradestation_client(
     if client_secret is None:
         client_secret = os.getenv("TRADESTATION_CLIENT_SECRET")
     
-    if redirect_uri is None:
-        redirect_uri = os.getenv("TRADESTATION_REDIRECT_URI", "http://localhost:8080/callback")
-    
     if refresh_token is None:
         refresh_token = os.getenv("TRADESTATION_CLIENT_REFRESH")
     
@@ -552,10 +481,15 @@ def create_tradestation_client(
             "Set TRADESTATION_CLIENT_ID and TRADESTATION_CLIENT_SECRET environment variables."
         )
     
+    if not refresh_token:
+        raise ValueError(
+            "TradeStation refresh token is required. "
+            "Set TRADESTATION_CLIENT_REFRESH environment variable."
+        )
+    
     config = TradeStationConfig(
         client_id=client_id,
         client_secret=client_secret,
-        redirect_uri=redirect_uri,
         refresh_token=refresh_token,
         use_sandbox=use_sandbox
     )
