@@ -97,12 +97,12 @@ def test_barcharts_endpoint(access_token=None):
     symbol = "AAPL"
     endpoint = f"https://api.tradestation.com/v3/marketdata/barcharts/{symbol}"
     
-    # Parameters as specified
+    # Parameters as specified - using more recent date range to get more data
     params = {
         'interval': 1,
         'unit': 'Daily',
-        'startdate': '2021-07-01T00:00:00Z',
-        'enddate': '2025-07-15T23:59:59Z'
+        'startdate': '2023-01-01T00:00:00Z',
+        'enddate': '2024-12-31T23:59:59Z'
     }
     
     print(f"Endpoint: {endpoint}")
@@ -131,15 +131,37 @@ def test_barcharts_endpoint(access_token=None):
             if response.status_code == 200:
                 data = response.json()
                 print("SUCCESS! Historical data retrieved:")
+                print("=" * 50)
+                print("FULL RESPONSE DATA:")
+                print("=" * 50)
+                
+                # Show the complete response
+                print(json.dumps(data, indent=2))
+                
+                # Also show a summary if Bars exist
                 if 'Bars' in data:
                     bars = data['Bars']
+                    print(f"\nSUMMARY:")
                     print(f"Number of bars: {len(bars)}")
                     if bars:
-                        print(f"Date range: {bars[0].get('DateTime', 'N/A')} to {bars[-1].get('DateTime', 'N/A')}")
+                        print(f"Date range: {bars[0].get('TimeStamp', 'N/A')} to {bars[-1].get('TimeStamp', 'N/A')}")
                         print(f"Latest price: ${bars[-1].get('Close', 'N/A')}")
+                        
+                        # Show first few and last few bars for overview
+                        print(f"\nFIRST 3 BARS:")
+                        for i, bar in enumerate(bars[:3]):
+                            print(f"  Bar {i+1}: {bar.get('TimeStamp', 'N/A')} - Open: ${bar.get('Open', 'N/A')}, High: ${bar.get('High', 'N/A')}, Low: ${bar.get('Low', 'N/A')}, Close: ${bar.get('Close', 'N/A')}, Volume: {bar.get('TotalVolume', 'N/A')}")
+                        
+                        if len(bars) > 6:
+                            print(f"\n... ({len(bars)-6} more bars) ...")
+                            
+                        print(f"\nLAST 3 BARS:")
+                        for i, bar in enumerate(bars[-3:]):
+                            bar_num = len(bars) - 3 + i + 1
+                            print(f"  Bar {bar_num}: {bar.get('TimeStamp', 'N/A')} - Open: ${bar.get('Open', 'N/A')}, High: ${bar.get('High', 'N/A')}, Low: ${bar.get('Low', 'N/A')}, Close: ${bar.get('Close', 'N/A')}, Volume: {bar.get('TotalVolume', 'N/A')}")
                 else:
-                    print("Response structure:")
-                    print(json.dumps(data, indent=2)[:500] + "..." if len(json.dumps(data, indent=2)) > 500 else json.dumps(data, indent=2))
+                    print("\nNo 'Bars' key found in response")
+                    print("Available keys:", list(data.keys()) if isinstance(data, dict) else "Not a dict")
             else:
                 print(f"ERROR: {response.text}")
                 
@@ -170,6 +192,26 @@ def test_with_our_client():
         # Test authentication structure
         print(f"\nRefresh token endpoint: {client.config.auth_base_url}{client.config.token_endpoint}")
         print(f"API endpoint: {client.config.base_url}{client.config.marketdata_endpoint}/barcharts/")
+        
+        # Actually try to get historical data with our client
+        print(f"\nTrying to get historical data with our client...")
+        try:
+            data = client.get_historical_data(
+                symbol='AAPL',
+                interval=1,
+                unit='Daily',
+                start_date='2023-01-01T00:00:00Z',
+                end_date='2023-12-31T23:59:59Z'
+            )
+            
+            if data:
+                print("SUCCESS! Got data from our client:")
+                print(json.dumps(data, indent=2))
+            else:
+                print("No data returned from client")
+                
+        except Exception as e:
+            print(f"Error getting data from client: {e}")
         
         return client
         
